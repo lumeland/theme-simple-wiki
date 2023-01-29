@@ -16,7 +16,6 @@ export default function () {
       "_includes/layout.njk",
       "_includes/templates/menu_item.njk",
       "_includes/templates/menu.njk",
-      "_data.yml",
       "404.md",
       "index.md",
       "styles.css",

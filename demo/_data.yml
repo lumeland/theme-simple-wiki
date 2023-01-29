@@ -1,1 +1,3 @@
-repo: https://github.com/lumeland/theme-simple-wiki
+repo:
+  url: https://github.com/lumeland/theme-simple-wiki
+  path: /demo

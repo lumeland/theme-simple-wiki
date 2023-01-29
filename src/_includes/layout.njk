@@ -31,7 +31,7 @@
       <time timestamp="{{ date | date("DATETIME") }}">Last updated: {{ date | date("HUMAN_DATETIME") }}</time>
       {% if repo %}
         &nbsp;—&nbsp;
-        <a href="{{ repo }}/edit/main{{ page.src.path }}{{ page.src.ext }}">Edit this page</a>
+        <a href="{{ repo.url }}/edit/main{{ repo.path }}{{ page.src.path }}{{ page.src.ext }}">Edit this page</a>
       {% endif %}
     </footer>
     {% endif %}
