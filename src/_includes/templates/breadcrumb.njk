@@ -1,0 +1,11 @@
+<nav>
+  <ul class="breadcrumb">
+    {% for item in nav.breadcrumb(url) %}
+    {% if item.url and item.url != url %}
+    <li class="breadcrumb-item"><a href="{{ item.url }}">{{ item.title }}</a></li>
+    {% elif not item.url %}
+    <li class="breadcrumb-item"><strong>{{ item.title }}</strong></li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</nav>

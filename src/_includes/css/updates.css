@@ -1,0 +1,11 @@
+.updates {
+  & time {
+    display: block;
+    font: var(--font-small);
+    color: var(--color-dim);
+  }
+
+  & li + li {
+    margin-top: 1em;
+  }
+}

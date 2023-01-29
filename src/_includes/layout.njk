@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+
+  <body>
+    <div class="toolbar">
+      <div id="search" class="search"></div>
+    </div>
+
+    {% include "templates/menu.njk" %}
+
+    <main class="main">
+      {% include "templates/breadcrumb.njk" %}
+
+      <div class="body" {% if content and pagefind != false %}data-pagefind-body{% endif %}>
+        {% if not title %}
+          <h1>{{ page.src.slug }}</h1>
+        {% endif %}
+        {% if content %}
+          {{ content | safe }}
+        {% else %}
+          <p class="emptyState">The page <code>{{ url }}</code> is empty</p>
+        {% endif %}
+      </div>
+    </main>
+
+    {% if edit != false %}  
+    <footer class="body-footer">
+      <time timestamp="{{ date | date("DATETIME") }}">Last updated: {{ date | date("HUMAN_DATETIME") }}</time>
+      {% if repo %}
+        &nbsp;—&nbsp;
+        <a href="{{ repo }}/edit/main{{ page.src.path }}{{ page.src.ext }}">Edit this page</a>
+      {% endif %}
+    </footer>
+    {% endif %}
+  </body>
+</html>

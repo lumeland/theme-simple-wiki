@@ -1,0 +1,44 @@
+@import "https://unpkg.com/@lumeland/ds@0.1.0/ds.css";
+@import "css/menu.css";
+@import "css/updates.css";
+
+body {
+  margin: 2em;
+  display: grid;
+  justify-content: center;
+  row-gap: 2em;
+  column-gap: 4em;
+  grid-template-columns: minmax(0, 800px);
+  grid-template-areas: "toolbar"
+                        "main"
+                        "menu"
+                        "footer";
+
+  @media (min-width: 950px) {
+    grid-template-columns: minmax(10vw, 250px) minmax(0, 800px);
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: "toolbar toolbar"
+                         "menu main"
+                         "menu footer";
+  }
+}
+body > nav {
+  grid-area: menu;
+}
+body > .toolbar {
+  grid-area: toolbar;
+}
+main {
+  grid-area: main;
+}
+.body {
+  margin-top: var(--row-gap-xsmall);
+}
+.body-footer {
+  grid-area: footer;
+  font: var(--font-small);
+  color: var(--color-dim);
+  border-top: solid 1px var(--color-line);
+  padding: 1em 0;
+  margin-top: 1em;
+}
