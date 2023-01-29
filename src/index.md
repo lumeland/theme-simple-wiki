@@ -1,3 +1,7 @@
-# Hello world
+---
+edit: false
+---
 
-This is where I save my notes
+# Simple Wiki
+
+Create a `index.md` file in your repo to customize this page.
