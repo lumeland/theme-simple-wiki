@@ -10,4 +10,4 @@ project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.1.0] - 2023-01-29
 First version
 
-[0.1.0]: https://github.com/lumeland/theme-notes/releases/tag/v0.1.0
+[0.1.0]: https://github.com/lumeland/theme-simple-wiki/releases/tag/v0.1.0
