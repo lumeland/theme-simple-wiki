@@ -1,10 +1,10 @@
-{% if item.url %}
-  <a {% if item.url == url %}aria-current="page"{% endif %} href="{{ item.url }}">
+{% if item.data %}
+  <a {% if item.data.url == url %}aria-current="page"{% endif %} href="{{ item.data.url }}">
     {% if item.children %}📁{% endif %}
-    {{ item.title }}
+    {{ item.data.title or item.slug }}
   </a>
 {% else %}
-  <span>📁 {{ item.title }}</span>
+  <span>📁 {{ item.slug }}</span>
 {% endif %}
 
 {% ifAsync item.children %}

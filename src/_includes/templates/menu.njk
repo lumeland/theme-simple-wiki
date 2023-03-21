@@ -2,10 +2,8 @@
   {% set page = search.page("url=/") %}
 
   {% if page %}
-    <a class="menu-highlight" href="{{ page.data.url }}">{{ page.data.title }}</a>
+    <a class="menu-highlight" href="{{ page.data.url }}">{{ page.data.title or slug }}</a>
   {% endif %}
-
-  {# <a class="menu-highlight" href="/updates/">Latest updates</a> #}
 
   <ul class="menu">
   {% asyncEach item in nav.menu().children %}
