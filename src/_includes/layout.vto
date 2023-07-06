@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>{{ it.title }}</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="toolbar">
+        <div id="search" class="search"></div>
+      </div>
+
+      {{ include "templates/menu.vto" }}
+
+      <main class="main">
+        {{ include "templates/breadcrumb.vto" }}
+
+        <div class="body" {{ if it.content && it.pagefind }}data-pagefind-body{{ /if }}>
+          {{ if !it.title }}
+            <h1>{{ page.src.slug }}</h1>
+          {{ /if }}
+
+          {{ if content }}
+            {{ content }}
+          {{ else }}
+            <p class="emptyState">The page <code>{{ url }}</code> is empty</p>
+          {{ /if }}
+        </div>
+      </main>
+
+      {{ if it.edit != false }}
+      <footer class="body-footer">
+        <time timestamp="{{ date |> date("DATETIME") }}">Last updated: {{ date |> date("HUMAN_DATETIME") }}</time>
+        {{ if it.repo }}
+          &nbsp;—&nbsp;
+          <a href="{{ repo.url }}/edit/main{{ repo.path }}{{ page.src.path }}{{ page.src.ext }}">Edit this page</a>
+        {{ /if }}
+      </footer>
+      {{ /if }}
+    </div>
+  </body>
+</html>

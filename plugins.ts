@@ -7,6 +7,7 @@ import toc from "https://deno.land/x/lume_markdown_plugins@v0.4.0/toc.ts";
 import prism from "lume/plugins/prism.ts";
 import date from "lume/plugins/date.ts";
 import basePath from "lume/plugins/base_path.ts";
+import vento from "lume/plugins/vento.ts";
 
 import type { Site } from "lume/core.ts";
 
@@ -25,8 +26,9 @@ export default function () {
     site.use(resolveUrls());
     site.use(date());
     site.use(basePath());
-    site.data("layout", "layout.njk");
+    site.data("layout", "layout.vto");
     site.data("date", "Git Last Modified");
+    site.use(vento());
     site.copy([
       ".jpg",
       ".jpeg",

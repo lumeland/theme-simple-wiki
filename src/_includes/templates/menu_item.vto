@@ -1,0 +1,18 @@
+{{ if item.data }}
+  <a {{ if item.data.url == url }}aria-current="page"{{ /if }} href="{{ item.data.url }}">
+    {{ if item.children }}📁{{ /if }}
+    {{ item.data.title || item.slug }}
+  </a>
+{{ else }}
+  <span>📁 {{ item.slug }}</span>
+{{ /if }}
+
+{{ if item.children }}
+<ul>
+  {{ for child of item.children }}
+  <li>
+    {{ include "templates/menu_item.vto" { item: child } }}
+  </li>
+  {{ /for }}
+</ul>
+{{ /if }}

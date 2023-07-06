@@ -2,10 +2,11 @@
 @import "css/menu.css";
 @import "css/updates.css";
 
-body {
-  margin: 2em;
+.container {
+  min-height: 100vh;
   display: grid;
   justify-content: center;
+  align-content: start;
   row-gap: 2em;
   column-gap: 4em;
   grid-template-columns: minmax(0, 800px);
@@ -14,25 +15,54 @@ body {
                         "menu"
                         "footer";
 
+  @media (max-width: 949px) {
+    padding: 5vw;
+  }
   @media (min-width: 950px) {
-    grid-template-columns: minmax(10vw, 250px) minmax(0, 800px);
+    grid-template-columns: 1fr minmax(10vw, 250px) minmax(0, 800px) 1fr;
     grid-template-rows: auto auto 1fr;
-    grid-template-areas: "toolbar toolbar"
-                         "menu main"
-                         "menu footer";
+    grid-template-areas: "menu menu toolbar"
+                         "menu menu main"
+                         "menu menu footer";
   }
 }
-body > nav {
+.container > nav {
   grid-area: menu;
+  background-color: var(--color-highlight);
+
+  @media (max-width: 949px) {
+    padding: 1rem;
+    border-radius: var(--border-radius);
+  }
+
+  @media (min-width: 950px) {
+    display: grid;
+    align-content: start;
+    grid-template-columns: 1fr minmax(10vw, 250px);
+    padding-top: 2rem;
+    border-right: solid 1px var(--color-line);
+
+    > * {
+      grid-column: 2;
+    }
+  }
 }
-body > .toolbar {
+.container > .toolbar {
   grid-area: toolbar;
+
+  @media (min-width: 950px) {
+    padding-top: 2rem;
+  }
 }
 main {
   grid-area: main;
 }
 .body {
   margin-top: var(--row-gap-xsmall);
+
+  & h1 {
+    color: var(--color-base);
+  }
 }
 .body-footer {
   grid-area: footer;

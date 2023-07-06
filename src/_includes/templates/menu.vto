@@ -1,0 +1,15 @@
+<nav>
+  {{> const page = search.page("url=/") }}
+
+  {{ if page }}
+    <a class="menu-highlight" href="{{ page.data.url }}">{{ page.data.title || slug }}</a>
+  {{ /if }}
+
+  <ul class="menu">
+  {{ for item of nav.menu().children }}
+    <li>
+      {{ include "templates/menu_item.vto" { item } }}
+    </li>
+  {{ /for }}
+  </ul>
+</nav>
