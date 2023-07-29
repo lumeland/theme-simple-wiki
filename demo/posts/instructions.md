@@ -1,6 +1,7 @@
 # How to install this theme
 
-**Simple wiki** is a clean and minimal wiki theme for Lume. It allows to build your own wiki or documentation site **in seconds**.
+**Simple wiki** is a clean and minimal wiki theme for Lume. It allows to build
+your own wiki or documentation site **in seconds**.
 
 <!--more-->
 

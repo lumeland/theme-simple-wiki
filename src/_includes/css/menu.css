@@ -1,12 +1,22 @@
 .menu-highlight {
   font: var(--font-small);
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  border-bottom: solid 1px var(--color-line);
-  padding: .5em 0;
+  background: var(--color-line);
+  height: 52px;
+  margin-bottom: 1rem;
+  border-radius: var(--border-radius);
+  padding: .5rem;
+  color: inherit;
 
   &:hover {
     text-decoration: underline;
+  }
+
+  @media (min-width: 960px) {
+    margin-right: 1rem;
   }
 }
 

@@ -25,8 +25,23 @@
                          "menu menu main"
                          "menu menu footer";
   }
+  @media (min-width: 1200px) {
+    grid-template-columns: 1fr minmax(10vw, 250px) minmax(0, 800px) 200px 1fr;
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas: "menu menu toolbar ."
+                         "menu menu main toc"
+                         "menu menu footer .";
+  }
 }
-.container > nav {
+.container > .toc {
+  display: none;
+  grid-area: toc;
+
+  @media (min-width: 1200px) {
+    display: block;
+  }
+}
+.container > nav.menu-container {
   grid-area: menu;
   background-color: var(--color-highlight);
 
