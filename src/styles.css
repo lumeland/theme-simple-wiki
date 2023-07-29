@@ -30,7 +30,7 @@
     grid-template-rows: auto auto 1fr;
     grid-template-areas: "menu menu toolbar ."
                          "menu menu main toc"
-                         "menu menu footer .";
+                         "menu menu footer toc";
   }
 }
 .container > .toc {
@@ -39,6 +39,9 @@
 
   @media (min-width: 1200px) {
     display: block;
+    position: sticky;
+    align-self: start;
+    top: 2rem;
   }
 }
 .container > nav.menu-container {
