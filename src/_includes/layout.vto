@@ -12,28 +12,28 @@
 
       {{ include "templates/menu.vto" }}
 
-      {{ if toc.length > 1 || (toc[0] && toc[0].children.length) }}
-        <nav class="toc">
-          <h2>Table of contents</h2>
-          <ol>
-            {{ for item of toc }}
-            <li>
-              <a href="#{{ item.slug }}">{{ item.text }}</a>
+      {{ if toc.length }}
+      <nav class="toc">
+        <h2>Table of contents</h2>
+        <ol>
+          {{ for item of toc }}
+          <li>
+            <a href="#{{ item.slug }}">{{ item.text }}</a>
 
-              {{ if item.children.length }}
-              <ul>
-                {{ for child of item.children }}
-                <li>
-                  <a href="#{{ child.slug }}">{{ child.text }}</a>
-                </li>
-                {{ /for }}
-              </ul>
-              {{ /if }}
-            </li>
-            {{ /for }}
-          </ol>
-        </nav>
-        {{ /if }}
+            {{ if item.children.length }}
+            <ul>
+              {{ for child of item.children }}
+              <li>
+                <a href="#{{ child.slug }}">{{ child.text }}</a>
+              </li>
+              {{ /for }}
+            </ul>
+            {{ /if }}
+          </li>
+          {{ /for }}
+        </ol>
+      </nav>
+      {{ /if }}
 
       <main class="main">
         {{ include "templates/breadcrumb.vto" }}
