@@ -2,8 +2,9 @@ import postcss from "lume/plugins/postcss.ts";
 import pagefind from "lume/plugins/pagefind.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
 import nav from "lume/plugins/nav.ts";
-import title from "https://deno.land/x/lume_markdown_plugins@v0.4.0/title.ts";
-import toc from "https://deno.land/x/lume_markdown_plugins@v0.4.0/toc.ts";
+import title from "https://deno.land/x/lume_markdown_plugins@v0.5.0/title.ts";
+import toc from "https://deno.land/x/lume_markdown_plugins@v0.5.0/toc.ts";
+import footnotes from "https://deno.land/x/lume_markdown_plugins@v0.5.0/footnotes.ts";
 import prism from "lume/plugins/prism.ts";
 import date from "lume/plugins/date.ts";
 import basePath from "lume/plugins/base_path.ts";
@@ -16,12 +17,9 @@ export default function () {
     site.use(nav());
     site.use(title());
     site.use(toc());
+    site.use(footnotes());
     site.use(postcss());
-    site.use(pagefind({
-      binary: {
-        version: "v0.10.7",
-      },
-    }));
+    site.use(pagefind());
     site.use(prism());
     site.use(resolveUrls());
     site.use(date());

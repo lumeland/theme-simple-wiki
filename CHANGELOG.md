@@ -6,6 +6,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.4.0] - 2023-07-31
+### Added
+- `extra_head` variable to insert additional code in the page `head` (like styles or scripts) [#2]
+- Footnotes.
+
+### Fixed
+- Removed pinned version of `pagefind`.
+
 ## [0.3.0] - 2023-07-29
 ### Added
 - Table of contents in wide screens.
@@ -29,6 +37,9 @@ project adheres to [Semantic Versioning](http://semver.org/).
 ## [0.1.0] - 2023-01-29
 First version
 
+[#2]: https://github.com/lumeland/theme-simple-wiki/issues/2
+
+[0.4.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.1.1...v0.2.0
 [0.1.1]: https://github.com/lumeland/theme-simple-wiki/compare/v0.1.0...v0.1.1

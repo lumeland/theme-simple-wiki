@@ -50,6 +50,19 @@
             <p class="emptyState">The page <code>{{ url }}</code> is empty</p>
           {{ /if }}
         </div>
+
+        {{ if it.footnotes.length }}
+        <aside role="note" class="footnotes">
+          <dl>
+            {{ for note of footnotes }}
+            <div id={{ note.id }} class="footnote">
+              <dt><a href="#{{ note.refId }}">{{ note.label }}</a></dt>
+              <dd>{{ note.content }}</dd>
+            </div>
+            {{ /for }}
+          </dl>
+        </aside>
+        {{ /if }}
       </main>
 
       {{ if it.edit != false }}
