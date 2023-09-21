@@ -2,11 +2,15 @@
   {{> const page = search.page("url=/") }}
 
   {{ if page }}
-    <a class="menu-highlight" href="{{ page.data.url }}">{{ page.data.title || slug }}</a>
+    {{ if page.data.logo }}
+      <a class="menu-logo" href="{{ page.data.url }}"><img src="{{ page.data.logo }}" alt="{{ page.data.title || slug }}"></a>
+    {{ else }}
+      <a class="menu-highlight" href="{{ page.data.url }}">{{ page.data.title || slug }}</a>
+    {{ /if }}
   {{ /if }}
 
   <ul class="menu">
-  {{ for item of nav.menu().children }}
+  {{ for item of nav.menu().children.sort((a, b) => a.data?.order - b.data?.order) }}
     <li>
       {{ include "templates/menu_item.vto" { item } }}
     </li>

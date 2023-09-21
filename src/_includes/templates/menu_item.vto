@@ -9,7 +9,7 @@
 
 {{ if item.children }}
 <ul>
-  {{ for child of item.children }}
+  {{ for child of item.children.sort((a, b) => a.data?.order - b.data?.order) }}
   <li>
     {{ include "templates/menu_item.vto" { item: child } }}
   </li>

@@ -20,6 +20,35 @@
   }
 }
 
+.menu-logo {
+  font: var(--font-small);
+  display: block;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  transition: opacity 200ms;
+  width: fit-content;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  & img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    max-height: 150px;
+  }
+
+  @media (min-width: 500px) AND (max-width: 959px) {
+    float: left;
+    margin-right: 1rem;
+    max-width: 150px;
+  }
+  @media (min-width: 960px) {
+    margin-right: 1rem;
+  }
+}
+
 .menu {
   list-style: none;
   margin: 0;
