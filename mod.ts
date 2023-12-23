@@ -1,9 +1,9 @@
 import plugins from "./plugins.ts";
 
-import type { Site } from "lume/core.ts";
+import "lume/types.ts";
 
 export default function () {
-  return (site: Site) => {
+  return (site: Lume.Site) => {
     // Configure the site
     site.use(plugins());
 

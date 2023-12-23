@@ -6,6 +6,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.6.0] - 2023-12-23
+### Changed
+- Upgrade to Lume 2.0.0
+- Update Lume DS
+
 ## [0.5.0] - 2023-09-21
 ### Added
 - Allow to order the pages in the menu with the `order` value.
@@ -50,6 +55,7 @@ First version
 
 [#2]: https://github.com/lumeland/theme-simple-wiki/issues/2
 
+[0.6.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.2.0...v0.3.0

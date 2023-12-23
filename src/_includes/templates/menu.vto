@@ -2,10 +2,10 @@
   {{> const page = search.page("url=/") }}
 
   {{ if page }}
-    {{ if page.data.logo }}
-      <a class="menu-logo" href="{{ page.data.url }}"><img src="{{ page.data.logo }}" alt="{{ page.data.title || slug }}"></a>
+    {{ if page.logo }}
+      <a class="menu-logo" href="{{ page.url }}"><img src="{{ page.logo }}" alt="{{ page.title || slug }}"></a>
     {{ else }}
-      <a class="menu-highlight" href="{{ page.data.url }}">{{ page.data.title || slug }}</a>
+      <a class="menu-highlight" href="{{ page.url }}">{{ page.title || slug }}</a>
     {{ /if }}
   {{ /if }}
 
