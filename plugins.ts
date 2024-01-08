@@ -13,28 +13,29 @@ import "lume/types.ts";
 
 export default function () {
   return (site: Lume.Site) => {
-    site.use(nav());
-    site.use(title());
-    site.use(toc());
-    site.use(footnotes());
-    site.use(postcss());
-    site.use(pagefind());
-    site.use(prism());
-    site.use(resolveUrls());
-    site.use(date());
-    site.use(basePath());
-    site.data("layout", "layout.vto");
-    site.data("date", "Git Last Modified");
-    site.copy([
-      ".jpg",
-      ".jpeg",
-      ".png",
-      ".webp",
-      ".svg",
-      ".mp4",
-      ".webm",
-      ".gif",
-    ]);
+    site.use(nav())
+      .use(title())
+      .use(toc())
+      .use(footnotes())
+      .use(postcss())
+      .use(pagefind())
+      .use(prism())
+      .use(resolveUrls())
+      .use(date())
+      .use(basePath())
+      .data("layout", "layout.vto")
+      .data("date", "Git Last Modified")
+      .mergeKey("extra_head", "stringArray")
+      .copy([
+        ".jpg",
+        ".jpeg",
+        ".png",
+        ".webp",
+        ".svg",
+        ".mp4",
+        ".webm",
+        ".gif",
+      ]);
 
     // Basic CSS Design System
     site.remoteFile(

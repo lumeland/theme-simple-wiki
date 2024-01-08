@@ -6,6 +6,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.6.1] - 2024-01-08
+### Changed
+- `extra_head` is merged as `stringArray`.
+
+### Fixed
+- Added missing `meta` tags to the head [#4].
+- Added default favicon and canonical link to the head.
+
 ## [0.6.0] - 2023-12-23
 ### Changed
 - Upgrade to Lume 2.0.0
@@ -54,7 +62,9 @@ project adheres to [Semantic Versioning](http://semver.org/).
 First version
 
 [#2]: https://github.com/lumeland/theme-simple-wiki/issues/2
+[#4]: https://github.com/lumeland/theme-simple-wiki/issues/4
 
+[0.6.1]: https://github.com/lumeland/theme-simple-wiki/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.3.0...v0.4.0

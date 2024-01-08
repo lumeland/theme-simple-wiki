@@ -1,8 +1,17 @@
 <html>
   <head>
-    <title>{{ it.title || page.src.slug }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ it.title || it.basename }}</title>
+
+    <meta name="supported-color-schemes" content="light dark">
+    <meta name="theme-color" content="hsl(220, 20%, 100%)" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="hsl(220, 20%, 10%)" media="(prefers-color-scheme: dark)">
+
     <link rel="stylesheet" href="/styles.css">
-    {{ it.extra_head || "" }}
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+    <link rel="canonical" href="{{ url |> url(true) }}">
+    {{ it.extra_head?.join("\n") }}
   </head>
 
   <body>
@@ -41,7 +50,7 @@
 
         <div class="body" {{ if it.content && it.pagefind }}data-pagefind-body{{ /if }}>
           {{ if !it.title }}
-            <h1>{{ page.src.slug }}</h1>
+            <h1>{{ it.basename }}</h1>
           {{ /if }}
 
           {{ if content }}
