@@ -98,6 +98,11 @@ main {
   & h1 {
     color: var(--color-base);
   }
+  & h1,
+  & h2,
+  & h3 {
+    text-wrap: balance;
+  }
 }
 .body-footer {
   grid-area: footer;
