@@ -74,7 +74,7 @@
         {{ /if }}
       </main>
 
-      {{ if it.edit != false }}
+      {{ if it.edit != false && it.repo }}
       <footer class="body-footer">
         <time timestamp="{{ date |> date("DATETIME") }}">Last updated: {{ date |> date("HUMAN_DATETIME") }}</time>
         {{ if it.repo }}

@@ -6,6 +6,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.6.2] - Unreleased
+### Removed
+- Removed demo folder.
+
+### Fixed
+- Hide footer if `it.repo` is undefined.
+
 ## [0.6.1] - 2024-01-08
 ### Changed
 - `extra_head` is merged as `stringArray`.
@@ -64,6 +71,7 @@ First version
 [#2]: https://github.com/lumeland/theme-simple-wiki/issues/2
 [#4]: https://github.com/lumeland/theme-simple-wiki/issues/4
 
+[0.6.2]: https://github.com/lumeland/theme-simple-wiki/compare/v0.6.1...HEAD
 [0.6.1]: https://github.com/lumeland/theme-simple-wiki/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.4.0...v0.5.0
