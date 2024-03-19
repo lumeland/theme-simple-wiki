@@ -18,6 +18,20 @@
     <div class="container">
       <div class="toolbar">
         <div id="search" class="search"></div>
+        <script>
+          let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light");
+          document.documentElement.dataset.theme = theme;
+          function changeTheme() {
+            theme = theme === "dark" ? "light" : "dark";
+            localStorage.setItem("theme", theme);
+            document.documentElement.dataset.theme = theme;
+          }
+        </script>
+        <button class="button theme" onclick="changeTheme()">
+          <span class="icon">◐</span>
+        </button>
       </div>
 
       {{ include "templates/menu.vto" }}

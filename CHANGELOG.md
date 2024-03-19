@@ -7,6 +7,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.6.2] - 2024-03-19
+### Added
+- Theme switcher button.
+
+### Changed
+- Updated `@lumeland/ds` to v5, which provides several improvements like:
+  - Inter font upgraded to v4.
+  - Improved code color syntax.
+  - Fixed pagination layout.
+  - Several color and spacing fixes.
+
+## [0.6.2] - 2024-03-19
 ### Removed
 - Removed demo folder.
 
@@ -71,6 +82,7 @@ First version
 [#2]: https://github.com/lumeland/theme-simple-wiki/issues/2
 [#4]: https://github.com/lumeland/theme-simple-wiki/issues/4
 
+[0.6.2]: https://github.com/lumeland/theme-simple-wiki/compare/v0.6.2...v0.6.2
 [0.6.2]: https://github.com/lumeland/theme-simple-wiki/compare/v0.6.1...v0.6.2
 [0.6.1]: https://github.com/lumeland/theme-simple-wiki/compare/v0.6.0...v0.6.1
 [0.6.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.5.0...v0.6.0

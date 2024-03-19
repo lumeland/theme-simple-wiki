@@ -70,9 +70,23 @@
 }
 .container > .toolbar {
   grid-area: toolbar;
+  display: flex;
+  align-items: center;
+  column-gap: .5rem;
+
+  .search {
+    flex: 1 1 auto;
+  }
 
   @media (min-width: 950px) {
     padding-top: 2rem;
+  }
+  @media (min-width: 1200px) {
+    .theme {
+      position: fixed;
+      top: 1rem;
+      right: 1.2rem;
+    }
   }
 }
 main {
