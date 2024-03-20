@@ -22,11 +22,11 @@
     padding: 5vw;
   }
   @media (min-width: 950px) {
-    grid-template-columns: 1fr minmax(10vw, 250px) minmax(0, 800px) 1fr;
+    grid-template-columns: clamp(250px, 25vw, 300px) minmax(0, 800px) 1fr;
     grid-template-rows: auto auto 1fr;
-    grid-template-areas: "menu menu toolbar"
-                         "menu menu main"
-                         "menu menu footer";
+    grid-template-areas: "menu toolbar"
+                         "menu main"
+                         "menu footer";
   }
   @media (min-width: 1200px) {
     grid-template-columns: 1fr minmax(10vw, 250px) minmax(0, 800px) 200px 1fr;
@@ -50,9 +50,9 @@
 .container > nav.menu-container {
   grid-area: menu;
   background-color: var(--color-highlight);
+  padding: 1rem;
 
   @media (max-width: 949px) {
-    padding: 1rem;
     border-radius: var(--border-radius);
   }
 
@@ -98,11 +98,6 @@ main {
   & h1 {
     color: var(--color-base);
   }
-  & h1,
-  & h2,
-  & h3 {
-    text-wrap: balance;
-  }
 }
 .body-footer {
   grid-area: footer;
@@ -111,4 +106,12 @@ main {
   border-top: solid 1px var(--color-line);
   padding: 1em 0;
   margin-top: 1em;
+}
+
+/* Alignment fix */
+.icon:not(:has(svg)) {
+  padding-bottom: .25em;
+}
+.icon {
+  vertical-align: middle;
 }

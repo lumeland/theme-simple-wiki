@@ -14,10 +14,6 @@
   &:hover {
     text-decoration: underline;
   }
-
-  @media (min-width: 960px) {
-    margin-right: 1rem;
-  }
 }
 
 .menu-logo {
@@ -68,7 +64,8 @@
   }
   & li {
     position: relative;
-    padding-left: .75em;
+    padding-left: .5em;
+    margin-block: 2px;
 
     &::before {
       content: "";
@@ -82,25 +79,29 @@
   }
 
   & a,
-  & span {
+  & li > span {
     display: block;
-    padding: .3em 0;
-    border-radius: var(--border-radius);
-    max-width: max-content;
+    border-radius: .3em;
     text-decoration: none;
+    padding: .3em;
   }
 
   & a {
+    padding: .3em .5em;
     text-decoration: none;
 
     &:hover {
-      text-decoration: underline;
+      background: var(--color-line);
+    }
+
+    @media (max-width: 949px) {
+      max-width: max-content;
     }
   }
 
   & a[aria-current="page"] {
     font: var(--font-small-bold);
     color: var(--color-base);
-    text-decoration: none;
+    background: var(--color-line);
   }
 }

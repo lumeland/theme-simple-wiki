@@ -6,12 +6,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.7.1] - 2024-03-20
+### Added
+- Support for [markdown alerts](https://github.com/orgs/community/discussions/16925).
+
+### Fixed
+- Updated `@lumeland/ds` to v0.5.1.
+- Menu style tweaks.
+
 ## [0.7.0] - 2024-03-19
 ### Added
 - Theme switcher button.
 
 ### Changed
-- Updated `@lumeland/ds` to v5, which provides several improvements like:
+- Updated `@lumeland/ds` to v0.5, which provides several improvements like:
   - Inter font upgraded to v4.
   - Improved code color syntax.
   - Fixed pagination layout.
@@ -82,6 +90,7 @@ First version
 [#2]: https://github.com/lumeland/theme-simple-wiki/issues/2
 [#4]: https://github.com/lumeland/theme-simple-wiki/issues/4
 
+[0.7.1]: https://github.com/lumeland/theme-simple-wiki/compare/v0.7.0...v0.7.1
 [0.7.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.6.2...v0.7.0
 [0.6.2]: https://github.com/lumeland/theme-simple-wiki/compare/v0.6.1...v0.6.2
 [0.6.1]: https://github.com/lumeland/theme-simple-wiki/compare/v0.6.0...v0.6.1
