@@ -94,10 +94,6 @@ main {
 }
 .body {
   margin-top: var(--row-gap-xsmall);
-
-  & h1 {
-    color: var(--color-base);
-  }
 }
 .body-footer {
   grid-area: footer;

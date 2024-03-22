@@ -6,6 +6,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.8.0] - 2024-03-22
+### Added
+- CMS configuration.
+- Favicon plugin to generate the favicons from `favicon.svg` file.
+
+### Removed
+- Archetypes. Use the CMS instead.
+
+### Fixed
+- Error rendering the menu if the wiki is empty.
+- Aside menu tweaks and fixes.
+- Updated ds.
+
 ## [0.7.1] - 2024-03-20
 ### Added
 - Support for [markdown alerts](https://github.com/orgs/community/discussions/16925).
@@ -90,6 +103,7 @@ First version
 [#2]: https://github.com/lumeland/theme-simple-wiki/issues/2
 [#4]: https://github.com/lumeland/theme-simple-wiki/issues/4
 
+[0.8.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.7.1...v0.8.0
 [0.7.1]: https://github.com/lumeland/theme-simple-wiki/compare/v0.7.0...v0.7.1
 [0.7.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.6.2...v0.7.0
 [0.6.2]: https://github.com/lumeland/theme-simple-wiki/compare/v0.6.1...v0.6.2

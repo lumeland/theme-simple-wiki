@@ -58,13 +58,13 @@
 
   & ul {
     list-style: none;
-    margin-left: .5em;
+    margin-left: .9em;
     padding: 0;
     border-left: solid 1px var(--color-line);
   }
   & li {
     position: relative;
-    padding-left: .5em;
+    padding-left: .6em;
     margin-block: 2px;
 
     &::before {
@@ -100,7 +100,6 @@
   }
 
   & a[aria-current="page"] {
-    font: var(--font-small-bold);
     color: var(--color-base);
     background: var(--color-line);
   }

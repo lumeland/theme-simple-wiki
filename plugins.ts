@@ -8,6 +8,7 @@ import footnotes from "https://deno.land/x/lume_markdown_plugins@v0.7.0/footnote
 import prism from "lume/plugins/prism.ts";
 import date from "lume/plugins/date.ts";
 import basePath from "lume/plugins/base_path.ts";
+import favicon from "lume/plugins/favicon.ts";
 import { alert } from "npm:@mdit/plugin-alert@0.8.0";
 
 import "lume/types.ts";
@@ -23,6 +24,7 @@ export default function () {
       .use(prism())
       .use(resolveUrls())
       .use(date())
+      .use(favicon())
       .use(basePath())
       .data("layout", "layout.vto")
       .data("date", "Git Last Modified")
@@ -44,7 +46,7 @@ export default function () {
     // Basic CSS Design System
     site.remoteFile(
       "_includes/css/ds.css",
-      "https://unpkg.com/@lumeland/ds@0.5.1/ds.css",
+      "https://unpkg.com/@lumeland/ds@0.5.2/ds.css",
     );
   };
 }

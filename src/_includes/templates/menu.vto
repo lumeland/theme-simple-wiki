@@ -10,7 +10,7 @@
   {{ /if }}
 
   <ul class="menu">
-  {{ for item of nav.menu().children.sort((a, b) => a.data?.order - b.data?.order) }}
+  {{ for item of nav.menu().children?.sort((a, b) => a.data?.order - b.data?.order) }}
     <li>
       {{ include "templates/menu_item.vto" { item } }}
     </li>
