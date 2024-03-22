@@ -19,7 +19,7 @@ export default function () {
       "404.md",
       "index.md",
       "styles.css",
-      "favicon.png",
+      "favicon.svg",
     ];
 
     for (const file of files) {
