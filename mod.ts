@@ -16,10 +16,7 @@ export default function () {
       "_includes/layout.vto",
       "_includes/templates/menu_item.vto",
       "_includes/templates/menu.vto",
-      "404.md",
-      "index.md",
       "styles.css",
-      "favicon.svg",
     ];
 
     for (const file of files) {

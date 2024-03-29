@@ -10,6 +10,8 @@ project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Updated `@lumeland/ds` and import it from unpkg CDN.
 - Use import map for LumeCMS.
+- Removed index.md, 404.md and favicon.svg from remote files.
+  They are copied by init script.
 
 ## [0.8.0] - 2024-03-22
 ### Added
