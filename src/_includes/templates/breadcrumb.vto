@@ -2,7 +2,7 @@
   <ul class="breadcrumb">
     {{ for item of nav.breadcrumb(url) }}
     {{ if item.data && item.data.url != url }}
-    <li class="breadcrumb-item"><a href="{{ item.data.url }}">{{ item.data.title }}</a></li>
+    <li class="breadcrumb-item"><a href="{{ item.data.url }}">{{ item.data.title || item.slug }}</a></li>
     {{ else if !item.data }}
     <li class="breadcrumb-item"><strong>{{ item.slug }}</strong></li>
     {{ /if }}

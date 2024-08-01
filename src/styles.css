@@ -60,8 +60,14 @@
     display: grid;
     align-content: start;
     grid-template-columns: 1fr minmax(10vw, 250px);
+    grid-template-rows: auto minmax(0, 1fr);
     padding-top: 2rem;
+    padding-bottom: 0;
     border-right: solid 1px var(--color-line);
+    align-self: start;
+    height: 100vh;
+    position: sticky;
+    top: 0;
 
     > * {
       grid-column: 2;

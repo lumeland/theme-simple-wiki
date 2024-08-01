@@ -28,6 +28,7 @@ export default function () {
       .use(basePath())
       .data("layout", "layout.vto")
       .data("date", "Git Last Modified")
+      .data("order", 0)
       .mergeKey("extra_head", "stringArray")
       .copy([
         ".jpg",

@@ -21,6 +21,4 @@ Here is a footnote reference,[^1] and [^2]another. And this[^3] is a long note.
 
     Subsequent paragraphs are indented (4 spaces) to show that they belong to the previous footnote.
 
-> [!tip]
-> This is a tip paragraph
-
+> [!tip] This is a tip paragraph
