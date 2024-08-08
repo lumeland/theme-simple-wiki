@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.9.1] - 2024-08-08
+### Added
+- Option to customize the favicon.
+
 ## [0.9.0] - 2024-08-01
 ### Changed
 - Ability to collapse/expande tree nodes [#9]
@@ -129,6 +133,7 @@ First version
 [#8]: https://github.com/lumeland/theme-simple-wiki/issues/8
 [#9]: https://github.com/lumeland/theme-simple-wiki/issues/9
 
+[0.9.1]: https://github.com/lumeland/theme-simple-wiki/compare/v0.9.0...v0.9.1
 [0.9.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.8.2...v0.9.0
 [0.8.2]: https://github.com/lumeland/theme-simple-wiki/compare/v0.8.1...v0.8.2
 [0.8.1]: https://github.com/lumeland/theme-simple-wiki/compare/v0.8.0...v0.8.1
