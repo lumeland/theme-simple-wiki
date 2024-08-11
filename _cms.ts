@@ -7,16 +7,28 @@ cms.document(
   "src:index.md",
   [
     {
-      name: "logo",
-      type: "file",
-      description: "Logo of the site. It's applied to all pages.",
+      name: "extra_head",
+      type: "code",
+      description: "Extra content to include in the <head> tag",
+    },
+    "content: markdown",
+  ],
+);
+
+cms.document(
+  "settings: Global settings for the site",
+  "src:_data.yml",
+  [
+    {
+      name: "lang",
+      type: "text",
+      label: "Language",
     },
     {
       name: "extra_head",
       type: "code",
       description: "Extra content to include in the <head> tag",
     },
-    "content: markdown",
   ],
 );
 
