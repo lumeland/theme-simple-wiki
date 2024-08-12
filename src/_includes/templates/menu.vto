@@ -15,5 +15,14 @@
       {{ include "templates/menu_item.vto" { item } }}
     </li>
   {{ /for }}
+
+  {{- for link of menu_links }}
+    <li>
+      <a href="{{ link.href }}" class="menu-custom">
+        {{ link.icon |> icon }}
+        {{ link.text }}
+      </a>
+    </li>
+  {{ /for }}
   </ul>
 </nav>

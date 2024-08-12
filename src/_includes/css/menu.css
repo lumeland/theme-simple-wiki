@@ -110,6 +110,18 @@
     color: var(--color-base);
     background-color: var(--color-line);
   }
+
+  .menu-custom {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+  
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--color-base);
+    }
+  }
 }
 
 [data-theme="dark"] {

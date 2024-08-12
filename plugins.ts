@@ -9,6 +9,9 @@ import prism from "lume/plugins/prism.ts";
 import date from "lume/plugins/date.ts";
 import basePath from "lume/plugins/base_path.ts";
 import favicon, { Options as FaviconOptions } from "lume/plugins/favicon.ts";
+import phosphor, {
+  Options as IconOptions,
+} from "https://deno.land/x/lume_icon_plugins@v0.2.3/phosphor.ts";
 import { alert } from "npm:@mdit/plugin-alert@0.8.0";
 
 import "lume/types.ts";
@@ -18,6 +21,11 @@ export interface Options {
    * Options for the favicon plugin.
    */
   favicon?: FaviconOptions;
+
+  /**
+   * Options for the phosphor plugin.
+   */
+  icons?: IconOptions;
 }
 
 export default function (options: Options = {}) {
@@ -33,6 +41,10 @@ export default function (options: Options = {}) {
       .use(date())
       .use(favicon(options.favicon))
       .use(basePath())
+      .use(phosphor({
+        ...options.icons,
+        name: "icon",
+      }))
       .data("layout", "layout.vto")
       .data("date", "Git Last Modified")
       .data("order", 0)

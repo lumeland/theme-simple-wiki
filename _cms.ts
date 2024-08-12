@@ -15,22 +15,49 @@ cms.document(
   ],
 );
 
-cms.document(
-  "settings: Global settings for the site",
-  "src:_data.yml",
-  [
+cms.document({
+  name: "Settings",
+  description: "Global settings for the site",
+  store: "src:_data.yml",
+  url: "/",
+  fields: [
     {
       name: "lang",
       type: "text",
       label: "Language",
+      description: "The language of the site",
     },
     {
       name: "extra_head",
       type: "code",
       description: "Extra content to include in the <head> tag",
     },
+    {
+      name: "menu_links",
+      type: "object-list",
+      description: "Extra links to include in the main menu",
+      fields: [
+        {
+          name: "text",
+          type: "text",
+          label: "Text",
+        },
+        {
+          name: "href",
+          type: "text",
+          label: "URL",
+        },
+        {
+          name: "icon",
+          type: "text",
+          label: "Icon",
+          description:
+            "<a href='https://phosphoricons.com/' target='_blank'>A Phosphor icon</a> name",
+        },
+      ],
+    },
   ],
-);
+});
 
 cms.collection(
   "pages: All pages of the site",
