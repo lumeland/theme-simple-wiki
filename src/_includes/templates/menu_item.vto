@@ -1,16 +1,16 @@
 {{ set expandable = !!item.children }}
 
-{{> let urlPrefix = `${prefix ?? "/" }${item.slug}/` }}
+{{> let urlPrefix = `${prefix ?? "/" }${item.data.basename}/` }}
 {{ set expanded = expandable ? url.startsWith(urlPrefix) : false }}
 
 {{ if expandable }}<details{{ expanded ? " open" : "" }}><summary>{{ /if }}
-{{ if item.data }}
+{{ if item.data.url }}
   <a {{ if item.data.url == url }}aria-current="page"{{ /if }} href="{{ item.data.url }}">
     {{ if item.children }}{{ /if }}
-    {{ item.data.title || item.slug }}
+    {{ item.data.title || item.data.basename }}
   </a>
 {{ else }}
-  <strong>{{ item.slug }}</strong>
+  <strong>{{ item.data.basename }}</strong>
 {{ /if }}
 
 {{ if expandable }}</summary>{{ /if }}
