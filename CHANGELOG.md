@@ -10,6 +10,11 @@ project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Addapt to a BREAKING CHANGE introduced in Lume 1.3.
 
+### Removed
+- The default value of `date` was `Git Last Modified`.
+  It was removed because affects the performance in large sites.
+
+
 ## [0.9.3] - 2024-08-12
 ### Added
 - Settings to CMS to configure a default extra_head and language.

@@ -46,7 +46,6 @@ export default function (options: Options = {}) {
         name: "icon",
       }))
       .data("layout", "layout.vto")
-      .data("date", "Git Last Modified")
       .data("order", 0)
       .mergeKey("extra_head", "stringArray")
       .copy([
