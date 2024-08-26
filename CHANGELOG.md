@@ -8,6 +8,7 @@ project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.10.0] - Unreleased
 ### Changed
+- Replaced static menu with the new `tree-menu` web component for build performance.
 - Addapt to a BREAKING CHANGE introduced in Lume 1.3.
 
 ### Removed

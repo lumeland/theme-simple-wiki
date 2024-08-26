@@ -48,6 +48,7 @@ export default function (options: Options = {}) {
       .data("layout", "layout.vto")
       .data("order", 0)
       .mergeKey("extra_head", "stringArray")
+      .copy("menu.js")
       .copy([
         ".jpg",
         ".jpeg",

@@ -17,6 +17,8 @@ export default function (options?: Options) {
       "_includes/layout.vto",
       "_includes/templates/menu_item.vto",
       "_includes/templates/menu.vto",
+      "menu.js",
+      "menu.page.ts",
       "styles.css",
     ];
 

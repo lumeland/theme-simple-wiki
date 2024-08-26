@@ -9,12 +9,7 @@
     {{ /if }}
   {{ /if }}
 
-  <ul class="menu">
-  {{ for item of nav.menu("/", "", "order=asc basename=asc").children }}
-    <li>
-      {{ include "templates/menu_item.vto" { item } }}
-    </li>
-  {{ /for }}
+  <tree-menu class="menu" data-url="{{ '/menu.json' |> url }}"></tree-menu>
 
   {{- for link of menu_links }}
     <li>
