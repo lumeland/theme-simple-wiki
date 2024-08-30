@@ -17,6 +17,9 @@ This version only works from Lume 1.3.
 - The default value of `date` was `Git Last Modified`.
   It was removed because affects the performance in large sites.
 
+### Fixed
+- Updated dependencies.
+
 ## [0.9.3] - 2024-08-12
 ### Added
 - Settings to CMS to configure a default extra_head and language.
