@@ -9,7 +9,19 @@
     {{ /if }}
   {{ /if }}
 
-  <tree-menu class="menu" data-url="{{ '/menu.json' |> url }}"></tree-menu>
+  {{ if alternates.length > 1 }}  
+  <ul class="menu-languages">
+  {{ for alt of alternates }}
+    <li>
+      <a href="{{ alt.url }}" {{ if alt.lang == lang }}aria-current="page"{{ /if }} title="{{ alt.title |> escape }}">
+        {{ alt.lang }}
+      </a>
+    </li>
+  {{ /for }}
+  </ul>
+  {{ /if }}
+
+  <tree-menu class="menu" data-url="{{ `/menu-${lang}.json` |> url }}"></tree-menu>
 
   {{- for link of menu_links }}
     <li>

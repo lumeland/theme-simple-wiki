@@ -72,6 +72,10 @@
     > * {
       grid-column: 2;
     }
+
+    &:has(.menu-languages) {
+      grid-template-rows: auto auto minmax(0, 1fr);
+    }
   }
 }
 .container > .toolbar {

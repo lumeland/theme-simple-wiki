@@ -44,6 +44,28 @@
     margin-right: 1rem;
   }
 }
+.menu-languages {
+  list-style: none;
+  margin: 0 0 1rem 0;
+  padding: 0;
+  display: flex;
+  gap: .5em;
+  text-transform: uppercase;
+  font: var(--font-small);
+
+  a {
+    color: var(--color-dim);
+    display: block;
+    border-radius: .3em;
+    padding: .25em;
+
+    &[aria-current="page"] {
+      text-decoration: none;
+      color: var(--color-base);
+      background-color: var(--color-line);
+    }
+  }
+}
 
 .menu {
   display: block;

@@ -1,7 +1,13 @@
 export const url = "/menu.json";
 
-export default function ({ nav }: Lume.Data) {
-  const menu = nav.menu("/", "", "order=asc basename=asc").children;
+export default function* ({ nav, languages }: Lume.Data) {
+  for (const lang of languages) {
+    const menu =
+      nav.menu("/", `lang=${lang}`, "order=asc basename=asc").children;
 
-  return JSON.stringify(menu, null, 2);
+    yield {
+      url: `/menu-${lang}.json`,
+      content: JSON.stringify(menu, null, 2),
+    };
+  }
 }
