@@ -68,6 +68,11 @@ cms.collection(
       type: "code",
       description: "Extra content to include in the <head> tag",
     },
+    {
+      name: "hide_menu",
+      type: "checkbox",
+      description: "Hide this page from the main menu",
+    },
     "content: markdown",
   ],
 );

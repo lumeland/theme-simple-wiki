@@ -8,7 +8,8 @@ project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [0.11.0] - Unreleased
 ### Added
-- Support for multilanguage sites.
+- Support for multilanguage sites, with the option `languages` and `languageNames`.
+- New variable `hide_menu` to hide a page from the main menu.
 
 ## [0.10.1] - 2024-08-30
 ### Fixed

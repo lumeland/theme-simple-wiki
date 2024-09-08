@@ -50,14 +50,13 @@
   padding: 0;
   display: flex;
   gap: .5em;
-  text-transform: uppercase;
   font: var(--font-small);
 
   a {
     color: var(--color-dim);
     display: block;
     border-radius: .3em;
-    padding: .25em;
+    padding: .25em .5em;
 
     &[aria-current="page"] {
       text-decoration: none;

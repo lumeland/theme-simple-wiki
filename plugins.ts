@@ -1,4 +1,3 @@
-import { merge } from "lume/core/utils/object.ts";
 import postcss from "lume/plugins/postcss.ts";
 import pagefind from "lume/plugins/pagefind.ts";
 import resolveUrls from "lume/plugins/resolve_urls.ts";
@@ -34,14 +33,16 @@ export interface Options {
    * The first language is the default language.
    */
   languages?: string[];
+
+  /**
+   * Language names for the multilanguage plugin.
+   * The key is the language code and the value is the language name.
+   * This is used to display the language name in the language switcher.
+   */
+  languageNames?: Record<string, string>;
 }
-export const defaults: Options = {
-  languages: ["en"],
-};
 
-export default function (userOptions?: Options) {
-  const options = merge(defaults, userOptions);
-
+export default function (options: Options = {}) {
   return (site: Lume.Site) => {
     site.use(nav())
       .use(title())
@@ -55,10 +56,6 @@ export default function (userOptions?: Options) {
       .use(favicon(options.favicon))
       .use(basePath())
       .data("languages", options.languages)
-      .use(multilanguage({
-        languages: options.languages,
-        defaultLanguage: options.languages[0],
-      }))
       .use(phosphor({
         ...options.icons,
         name: "icon",
@@ -77,6 +74,25 @@ export default function (userOptions?: Options) {
         ".webm",
         ".gif",
       ]);
+
+    // Multilanguage site
+    if (options.languages?.length) {
+      site.use(multilanguage({
+        languages: options.languages,
+        defaultLanguage: options.languages[0],
+      }));
+
+      const names = new Map<string, string>();
+      options.languages.forEach((lang) => {
+        if (options.languageNames?.[lang]) {
+          names.set(lang, options.languageNames[lang]);
+        } else {
+          const dn = new Intl.DisplayNames(lang, { type: "language" });
+          names.set(lang, dn.of(lang) || lang);
+        }
+      });
+      site.filter("langName", (lang: string) => names.get(lang) || lang);
+    }
 
     // Alert plugin
     site.hooks.addMarkdownItPlugin(alert);
