@@ -147,7 +147,12 @@
       fill: var(--color-base);
     }
   }
+
+  + ul {
+    margin-top: 1rem;
+  }
 }
+
 
 [data-theme="dark"] {
   .menu {

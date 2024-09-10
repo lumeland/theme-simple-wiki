@@ -7,9 +7,7 @@ const site = lume({
   src: "./src",
 });
 
-site.use(theme({
-  languages: ["en", "gl"],
-}));
+site.use(theme());
 site.use(ogimages());
 site.use(metas());
 

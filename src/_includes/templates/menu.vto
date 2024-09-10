@@ -9,7 +9,7 @@
     {{ /if }}
   {{ /if }}
 
-  {{ if alternates.length > 1 }}  
+  {{ if alternates?.length > 1 }}  
   <ul class="menu-languages">
   {{ for alt of alternates }}
     <li>
@@ -21,15 +21,19 @@
   </ul>
   {{ /if }}
 
-  <tree-menu class="menu" data-url="{{ `/menu-${lang}.json` |> url }}"></tree-menu>
-
-  {{- for link of menu_links }}
-    <li>
-      <a href="{{ link.href }}" class="menu-custom">
-        {{ link.icon |> icon }}
-        {{ link.text }}
-      </a>
-    </li>
-  {{ /for }}
-  </ul>
+  {{ set menu = alternates?.length ? `/menu-${lang}.json` : '/menu.json' }}
+  <tree-menu class="menu" data-url="{{ menu |> url }}">
+    {{ if menu_links?.length }}
+    <ul>
+    {{- for link of menu_links }}
+      <li>
+        <a href="{{ link.href }}" class="menu-custom">
+          {{ link.icon |> icon }}
+          {{ link.text }}
+        </a>
+      </li>
+    {{ /for }}
+    </ul>  
+    {{ /if }}
+  </tree-menu>
 </nav>

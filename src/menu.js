@@ -4,14 +4,14 @@ customElements.define(
     constructor() {
       super();
       const ul = document.createElement("ul");
-      this.appendChild(ul);
+      this.prepend(ul);
       this.loadMenu(ul);
     }
 
     render(menu, ul, url) {
       const fragment = document.createDocumentFragment();
 
-      for (const { data, children } of menu) {
+      for (const { data, children, slug } of menu) {
         let li = document.createElement("li");
         fragment.appendChild(li);
         if (children) {
@@ -22,14 +22,14 @@ customElements.define(
         if (data.url) {
           const a = document.createElement("a");
           a.href = data.url;
-          a.textContent = data.title || data.basename;
+          a.textContent = data.title || slug;
 
           if (data.url === url) {
             a.setAttribute("aria-current", "page");
           }
           li.appendChild(a);
         } else {
-          li.innerHTML = `<strong>${data.title || data.basename}</strong>`;
+          li.innerHTML = `<strong>${data.title || slug}</strong>`;
         }
 
         if (children) {

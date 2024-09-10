@@ -55,7 +55,7 @@ export default function (options: Options = {}) {
       .use(date())
       .use(favicon(options.favicon))
       .use(basePath())
-      .data("languages", options.languages)
+      .data("languages", options.languages || [])
       .use(phosphor({
         ...options.icons,
         name: "icon",

@@ -23,6 +23,16 @@ site.use(wiki());
 export default site;
 ```
 
+### Multilanguage support
+
+Use the `languages` option to configure a multilanguage site:
+
+```ts
+site.use(wiki({
+  languages: ["en", "gl", "es"],
+}));
+```
+
 You can see an example in the [demo](./demo) folder. To customize it copy the
 [`_data.yml`](./src/_data.yml) file in your blog root folder and edit it with
 your own data.
