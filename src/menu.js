@@ -25,10 +25,11 @@ customElements.define(
 
         if (data.url) {
           const a = document.createElement("a");
-          a.href = new URL(`.${data.url}`, baseUrl).href;
+          const href = new URL(`.${data.url}`, baseUrl).pathname;
+          a.href = href;
           a.textContent = data.title || slug;
 
-          if (data.url === url) {
+          if (href === url) {
             a.setAttribute("aria-current", "page");
           }
           li.appendChild(a);
