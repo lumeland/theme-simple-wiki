@@ -10,6 +10,10 @@ customElements.define(
 
     render(menu, ul, url) {
       const fragment = document.createDocumentFragment();
+      const baseUrl = new URL(
+        this.getAttribute("base-url") ?? "/",
+        document.location.origin,
+      );
 
       for (const { data, children, slug } of menu) {
         let li = document.createElement("li");
@@ -21,7 +25,7 @@ customElements.define(
 
         if (data.url) {
           const a = document.createElement("a");
-          a.href = data.url;
+          a.href = new URL(`.${data.url}`, baseUrl).href;
           a.textContent = data.title || slug;
 
           if (data.url === url) {
