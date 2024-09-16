@@ -22,7 +22,7 @@
   {{ /if }}
 
   {{ set menu = alternates?.length ? `/menu-${lang}.json` : '/menu.json' }}
-  <tree-menu class="menu" data-url="{{ menu |> url }}">
+  <tree-menu class="menu" data-base="{{ "/" |> url }}" data-url="{{ menu |> url }}">
     {{ if menu_links?.length }}
     <ul>
     {{- for link of menu_links }}

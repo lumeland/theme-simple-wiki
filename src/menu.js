@@ -11,7 +11,7 @@ customElements.define(
     render(menu, ul, url) {
       const fragment = document.createDocumentFragment();
       const baseUrl = new URL(
-        this.getAttribute("base-url") ?? "/",
+        this.dataset.base ?? "/",
         document.location.origin,
       );
 
