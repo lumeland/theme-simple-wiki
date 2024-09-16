@@ -11,7 +11,7 @@ import basePath from "lume/plugins/base_path.ts";
 import favicon, { Options as FaviconOptions } from "lume/plugins/favicon.ts";
 import phosphor, {
   Options as IconOptions,
-} from "https://deno.land/x/lume_icon_plugins@v0.2.3/phosphor.ts";
+} from "https://deno.land/x/lume_icon_plugins@v0.2.4/phosphor.ts";
 import { alert } from "npm:@mdit/plugin-alert@0.13.1";
 import multilanguage from "lume/plugins/multilanguage.ts";
 
