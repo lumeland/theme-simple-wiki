@@ -36,7 +36,7 @@
 
       {{ include "templates/menu.vto" }}
 
-      {{ if toc.length }}
+      {{ if toc?.length }}
       <nav class="toc">
         <h2>On this page</h2>
         <ol>
@@ -74,7 +74,7 @@
           {{ /if }}
         </div>
 
-        {{ if it.footnotes.length }}
+        {{ if it.footnotes?.length }}
         <aside role="note" class="footnotes">
           <dl>
             {{ for note of footnotes }}
