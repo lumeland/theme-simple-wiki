@@ -44,7 +44,7 @@ and edit the [_config.ts](./_config.ts) file. The source files are in the
 [src](./src/) folder. And you can remove the `/demo` folder.
 
 ## Available options
-
+### Edit `/src/_data.yml`
 Set options in your `/src/_data.yml`, such as, add extra links to the bottom of the sidebar menu:
 
 ```
@@ -66,6 +66,10 @@ extra_head: |
   <!-- / Fathom -->
 ```
 
+### Use lume cms
+You can also edit the above settings via [lume cms](https://lume.land/cms/) (run `deno task lume cms`), which is now included with simple-wiki. See the [relevant config section](https://github.com/lumeland/theme-simple-wiki/blob/main/_cms.ts#L18-L60) in the wiki's `_cms.ts`.
+
+### In Markdown Content
 In your markdown content files, [use Github-style "callout" codes](https://github.com/orgs/community/discussions/16925) to call attention to asides in your text. 
 
 ```
