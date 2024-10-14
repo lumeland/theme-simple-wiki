@@ -66,6 +66,12 @@ extra_head: |
   <!-- / Fathom -->
 ```
 
+Set the repository, which will cause an "Edit This Page" link to appear in the footer: 
+
+```
+repo: [https://github.com/me/therepo](https://github.com/me/therepo)
+```
+
 ### Use lume cms
 You can also edit the above settings via [lume cms](https://lume.land/cms/) (run `deno task lume cms`), which is now included with simple-wiki. See the [relevant config section](https://github.com/lumeland/theme-simple-wiki/blob/main/_cms.ts#L18-L60) in the wiki's `_cms.ts`.
 
@@ -89,3 +95,15 @@ In your markdown content files, [use Github-style "callout" codes](https://githu
 > Negative potential consequences of an action.
 ```
 
+Set edit to false in page frontmatter, to suppress the "Edit this Page" link: 
+
+```
+---
+title: My Cool Page
+...
+edit: false
+...
+---
+# The main topic
+Lorem ipsum...
+```
