@@ -6,9 +6,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
-## [0.12.0] - Unreleased
+## [0.12.0] - 2025-01-10
+### Added
+- Logo field in the CMS.
+- Detect order items from the filename prefix (like `1.page.md`).
+
 ### Changed
+- Breaking: moved the `logo` variable to `_data.yml` file.
+- Breaking: pages are sorted by `order`, `title` and `basename` (in this order).
 - CMS: uploads is recursive and more extensions are detected.
+- Dropdown caret in the menu has moved to the right.
+
+### Removed
+- Home document in the CMS. It's already in Pages collection.
+
+### Fixed
+- Make the scroll more stable
+- Improved some styles.
 
 ## [0.11.1] - 2024-09-16
 ### Fixed
@@ -172,7 +186,7 @@ First version
 [#8]: https://github.com/lumeland/theme-simple-wiki/issues/8
 [#9]: https://github.com/lumeland/theme-simple-wiki/issues/9
 
-[0.12.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.11.1...HEAD
+[0.12.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.11.1...v0.12.0
 [0.11.1]: https://github.com/lumeland/theme-simple-wiki/compare/v0.11.0...v0.11.1
 [0.11.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.10.1...v0.11.0
 [0.10.1]: https://github.com/lumeland/theme-simple-wiki/compare/v0.10.0...v0.10.1

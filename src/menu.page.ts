@@ -5,7 +5,7 @@ export default function* ({ nav, languages }: Lume.Data) {
     const menu = nav.menu(
       "/",
       `hide_menu!=true`,
-      "order=asc basename=asc-locale",
+      "order=asc title=asc-locale basename=asc-locale",
     )?.children ||
       [];
 
@@ -22,7 +22,7 @@ export default function* ({ nav, languages }: Lume.Data) {
     const menu = nav.menu(
       baseUrl,
       `lang=${lang} hide_menu!=true`,
-      "order=asc basename=asc-locale",
+      "order=asc title=asc-locale basename=asc-locale",
     )?.children ||
       [];
 

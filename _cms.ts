@@ -2,25 +2,18 @@ import lumeCMS from "lume/cms/mod.ts";
 
 const cms = lumeCMS();
 
-cms.document(
-  "Home: Main page configuration",
-  "src:index.md",
-  [
-    {
-      name: "extra_head",
-      type: "code",
-      description: "Extra content to include in the <head> tag",
-    },
-    "content: markdown",
-  ],
-);
-
 cms.document({
   name: "Settings",
   description: "Global settings for the site",
   store: "src:_data.yml",
   url: "/",
   fields: [
+    {
+      name: "logo",
+      type: "file",
+      description:
+        "The logo of the site. If it's emtpy, the title will be used",
+    },
     {
       name: "lang",
       type: "text",
@@ -66,7 +59,7 @@ cms.collection(
     {
       name: "extra_head",
       type: "code",
-      description: "Extra content to include in the <head> tag",
+      description: "Extra content to include in the HEAD tag",
     },
     {
       name: "hide_menu",

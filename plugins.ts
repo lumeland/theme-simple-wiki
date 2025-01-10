@@ -94,6 +94,19 @@ export default function (options: Options = {}) {
       site.filter("langName", (lang: string) => names.get(lang) || lang);
     }
 
+    // Parse order (e.g., 01.page.md)
+    site.parseBasename((name) => {
+      const match = name.match(/(\d+)\.(.+)/);
+
+      if (match) {
+        const [, order, basename] = match;
+        return {
+          order: parseInt(order),
+          basename,
+        };
+      }
+    });
+
     // Alert plugin
     site.hooks.addMarkdownItPlugin(alert);
   };
