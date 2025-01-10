@@ -44,8 +44,11 @@ and edit the [_config.ts](./_config.ts) file. The source files are in the
 [src](./src/) folder. And you can remove the `/demo` folder.
 
 ## Available options
+
 ### Edit `/src/_data.yml`
-Set options in your `/src/_data.yml`, such as, add extra links to the bottom of the sidebar menu:
+
+Set options in your `/src/_data.yml`, such as, add extra links to the bottom of
+the sidebar menu:
 
 ```
 menu_links: 
@@ -66,17 +69,25 @@ extra_head: |
   <!-- / Fathom -->
 ```
 
-Set the repository, which will cause an "Edit This Page" link to appear in the footer: 
+Set the repository, which will cause an "Edit This Page" link to appear in the
+footer:
 
 ```
 repo: [https://github.com/me/therepo](https://github.com/me/therepo)
 ```
 
 ### Use lume cms
-You can also edit the above settings via [lume cms](https://lume.land/cms/) (run `deno task lume cms`), which is now included with simple-wiki. See the [relevant config section](https://github.com/lumeland/theme-simple-wiki/blob/main/_cms.ts#L18-L60) in the wiki's `_cms.ts`.
+
+You can also edit the above settings via [lume cms](https://lume.land/cms/) (run
+`deno task lume cms`), which is now included with simple-wiki. See the
+[relevant config section](https://github.com/lumeland/theme-simple-wiki/blob/main/_cms.ts#L18-L60)
+in the wiki's `_cms.ts`.
 
 ### In Markdown Content
-In your markdown content files, [use Github-style "callout" codes](https://github.com/orgs/community/discussions/16925) to call attention to asides in your text. 
+
+In your markdown content files,
+[use Github-style "callout" codes](https://github.com/orgs/community/discussions/16925)
+to call attention to asides in your text.
 
 ```
 > [!NOTE]  
@@ -95,7 +106,7 @@ In your markdown content files, [use Github-style "callout" codes](https://githu
 > Negative potential consequences of an action.
 ```
 
-Set edit to false in page frontmatter, to suppress the "Edit this Page" link: 
+Set edit to false in page frontmatter, to suppress the "Edit this Page" link:
 
 ```
 ---

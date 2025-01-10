@@ -8,7 +8,7 @@
   height: 52px;
   margin-bottom: 1rem;
   border-radius: var(--border-radius);
-  padding: .5rem;
+  padding: 0.5rem;
   color: inherit;
 
   &:hover {
@@ -35,7 +35,7 @@
     max-height: 150px;
   }
 
-  @media (min-width: 500px) AND (max-width: 959px) {
+  @media (min-width: 500px) and (max-width: 959px) {
     float: left;
     margin-right: 1rem;
     max-width: 150px;
@@ -49,14 +49,14 @@
   margin: 0 0 1rem 0;
   padding: 0;
   display: flex;
-  gap: .5em;
+  gap: 0.5em;
   font: var(--font-small);
 
   a {
     color: var(--color-dim);
     display: block;
-    border-radius: .3em;
-    padding: .25em .5em;
+    border-radius: 0.3em;
+    padding: 0.25em 0.5em;
 
     &[aria-current="page"] {
       text-decoration: none;
@@ -82,7 +82,7 @@
 
   & ul {
     list-style: none;
-    margin-left: .9em;
+    margin-left: 0.9em;
     padding: 0;
   }
 
@@ -92,7 +92,7 @@
 
   details {
     border: none;
-    padding: .3em 0;
+    padding: 0.3em 0;
     border-top: solid 1px var(--color-line);
   }
   summary {
@@ -101,7 +101,7 @@
     padding-top: 0;
     padding-bottom: 0;
     align-items: center;
-    border-radius: .3em;
+    border-radius: 0.3em;
     font-weight: var(--font-bold);
   }
   details[open] > summary {
@@ -111,9 +111,9 @@
   & a,
   & li > span {
     display: block;
-    border-radius: .3em;
+    border-radius: 0.3em;
     text-decoration: none;
-    padding: .8em .5em;
+    padding: 0.8em 0.5em;
   }
 
   & a {
@@ -140,7 +140,7 @@
     display: flex;
     align-items: center;
     column-gap: 8px;
-  
+
     svg {
       width: 20px;
       height: 20px;
@@ -152,7 +152,6 @@
     margin-top: 1rem;
   }
 }
-
 
 [data-theme="dark"] {
   .menu {

@@ -77,6 +77,9 @@ cms.collection(
   ],
 );
 
-cms.upload("uploads: Uploaded files", "src:*{.jpg,.svg,.png}");
+cms.upload(
+  "uploads: Uploaded files",
+  "src:**/*{.jpg,.svg,.png,.gif,.mp3,.mp4,.pdf}",
+);
 
 export default cms;

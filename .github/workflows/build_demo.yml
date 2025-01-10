@@ -2,7 +2,7 @@ name: Build demo
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 permissions:
   contents: read
@@ -27,11 +27,11 @@ jobs:
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
-      
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: '_site'
+          path: "_site"
 
       - name: Deploy to GitHub Pages
         id: deployment

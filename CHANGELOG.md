@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.12.0] - Unreleased
+### Changed
+- CMS: uploads is recursive and more extensions are detected.
+
 ## [0.11.1] - 2024-09-16
 ### Fixed
 - Menu when the wiki is hosted in a subdirectory.
@@ -168,6 +172,7 @@ First version
 [#8]: https://github.com/lumeland/theme-simple-wiki/issues/8
 [#9]: https://github.com/lumeland/theme-simple-wiki/issues/9
 
+[0.12.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.11.1...HEAD
 [0.11.1]: https://github.com/lumeland/theme-simple-wiki/compare/v0.11.0...v0.11.1
 [0.11.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.10.1...v0.11.0
 [0.10.1]: https://github.com/lumeland/theme-simple-wiki/compare/v0.10.0...v0.10.1

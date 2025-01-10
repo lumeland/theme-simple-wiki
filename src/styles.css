@@ -13,10 +13,11 @@
   row-gap: 2em;
   column-gap: 4em;
   grid-template-columns: minmax(0, 800px);
-  grid-template-areas: "toolbar"
-                        "main"
-                        "menu"
-                        "footer";
+  grid-template-areas:
+    "toolbar"
+    "main"
+    "menu"
+    "footer";
 
   @media (max-width: 949px) {
     padding: 5vw;
@@ -24,16 +25,18 @@
   @media (min-width: 950px) {
     grid-template-columns: clamp(250px, 25vw, 300px) minmax(0, 800px) 1fr;
     grid-template-rows: auto auto 1fr;
-    grid-template-areas: "menu toolbar"
-                         "menu main"
-                         "menu footer";
+    grid-template-areas:
+      "menu toolbar"
+      "menu main"
+      "menu footer";
   }
   @media (min-width: 1200px) {
     grid-template-columns: 1fr minmax(10vw, 250px) minmax(0, 800px) 200px 1fr;
     grid-template-rows: auto auto 1fr;
-    grid-template-areas: "menu menu toolbar ."
-                         "menu menu main toc"
-                         "menu menu footer toc";
+    grid-template-areas:
+      "menu menu toolbar ."
+      "menu menu main toc"
+      "menu menu footer toc";
   }
 }
 .container > .toc {
@@ -82,7 +85,7 @@
   grid-area: toolbar;
   display: flex;
   align-items: center;
-  column-gap: .5rem;
+  column-gap: 0.5rem;
 
   .search {
     flex: 1 1 auto;
@@ -116,7 +119,7 @@ main {
 
 /* Alignment fix */
 .icon:not(:has(svg)) {
-  padding-bottom: .25em;
+  padding-bottom: 0.25em;
 }
 .icon {
   vertical-align: middle;
