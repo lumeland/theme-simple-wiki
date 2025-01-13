@@ -20,7 +20,7 @@
   font: var(--font-small);
   display: block;
   text-decoration: none;
-  margin-bottom: 1rem;
+  margin-bottom: 1.75rem;
   transition: opacity 200ms;
   width: fit-content;
 
@@ -80,20 +80,13 @@
   list-style: none;
   margin: 0;
   padding: 0;
-
-  + ul {
-    border-top: solid 1px var(--color-line);
-    padding-top: 1rem;
-  }
+  border-top: solid 1px var(--color-line);
+  padding-top: 1rem;
 
   & ul {
     list-style: none;
     margin-left: 0.9em;
     padding: 0;
-  }
-
-  > li:last-child:has(details) {
-    border-bottom: solid 1px var(--color-line);
   }
 
   details {
