@@ -101,7 +101,7 @@
     padding-bottom: 0;
     align-items: center;
     border-radius: 0.3em;
-    background-position-x: right 8px;
+    background-position-x: calc(100% - 8px);
     padding-left: 0;
     padding-right: 2em;
   }

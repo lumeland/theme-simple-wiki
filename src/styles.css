@@ -94,6 +94,12 @@ html {
   .search {
     flex: 1 1 auto;
   }
+  .theme {
+    svg {
+      display: block;
+      fill: currentColor;
+    }
+  }
 
   @media (min-width: 950px) {
     padding-top: 2rem;
