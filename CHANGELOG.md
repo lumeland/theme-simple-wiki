@@ -6,6 +6,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.13.0] - Unreleased
+### Changed
+- Support for Lume 3.
+
 ## [0.12.2] - 2025-03-05
 ### Fixed
 - Menu caret icons in Chromium browsers.
@@ -195,6 +199,7 @@ First version
 [#8]: https://github.com/lumeland/theme-simple-wiki/issues/8
 [#9]: https://github.com/lumeland/theme-simple-wiki/issues/9
 
+[0.13.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.12.2...HEAD
 [0.12.2]: https://github.com/lumeland/theme-simple-wiki/compare/v0.12.1...v0.12.2
 [0.12.1]: https://github.com/lumeland/theme-simple-wiki/compare/v0.12.0...v0.12.1
 [0.12.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.11.1...v0.12.0
