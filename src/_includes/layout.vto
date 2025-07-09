@@ -1,12 +1,20 @@
-<html lang="{{ it.lang || "en" }}">
+<html lang='{{ it.lang || "en" }}'>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ it.title || it.basename }}</title>
 
     <meta name="supported-color-schemes" content="light dark">
-    <meta name="theme-color" content="hsl(220, 20%, 100%)" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="hsl(220, 20%, 10%)" media="(prefers-color-scheme: dark)">
+    <meta
+      name="theme-color"
+      content="hsl(220, 20%, 100%)"
+      media="(prefers-color-scheme: light)"
+    >
+    <meta
+      name="theme-color"
+      content="hsl(220, 20%, 10%)"
+      media="(prefers-color-scheme: dark)"
+    >
 
     <link rel="stylesheet" href="/styles.css">
     <script type="module" src="/menu.js"></script>
@@ -19,9 +27,11 @@
       <div class="toolbar">
         <div id="search" class="search"></div>
         <script>
-          let theme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches
-            ? "dark"
-            : "light");
+          let theme = localStorage.getItem("theme") ||
+            (window.matchMedia("(prefers-color-scheme: dark)")
+                .matches
+              ? "dark"
+              : "light");
           document.documentElement.dataset.theme = theme;
           function changeTheme() {
             theme = theme === "dark" ? "light" : "dark";
@@ -29,40 +39,52 @@
             document.documentElement.dataset.theme = theme;
           }
         </script>
-        <button aria-label="Toogle to dark/light theme" class="button theme" onclick="changeTheme()">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill-rule="evenodd" d="M10 0c5.523 0 10 4.477 10 10s-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0Zm9 10a9 9 0 0 1-9 9V1a9 9 0 0 1 9 9Z"/></svg>
+        <button
+          aria-label="Toogle to dark/light theme"
+          class="button theme"
+          onclick="changeTheme()"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+            <path
+              fill-rule="evenodd"
+              d="M10 0c5.523 0 10 4.477 10 10s-4.477 10-10 10S0 15.523 0 10 4.477 0 10 0Zm9 10a9 9 0 0 1-9 9V1a9 9 0 0 1 9 9Z"
+            />
+          </svg>
         </button>
       </div>
 
       {{ include "templates/menu.vto" }}
 
       {{ if toc?.length }}
-      <nav class="toc">
-        <h2>On this page</h2>
-        <ol>
-          {{ for item of toc }}
-          <li>
-            <a href="#{{ item.slug }}">{{ item.text }}</a>
-
-            {{ if item.children.length }}
-            <ul>
-              {{ for child of item.children }}
+        <nav class="toc">
+          <h2>On this page</h2>
+          <ol>
+            {{ for item of toc }}
               <li>
-                <a href="#{{ child.slug }}">{{ child.text }}</a>
+                <a href="#{{ item.slug }}">{{ item.text }}</a>
+
+                {{ if item.children.length }}
+                  <ul>
+                    {{ for child of item.children }}
+                      <li>
+                        <a href="#{{ child.slug }}">{{ child.text }}</a>
+                      </li>
+                    {{ /for }}
+                  </ul>
+                {{ /if }}
               </li>
-              {{ /for }}
-            </ul>
-            {{ /if }}
-          </li>
-          {{ /for }}
-        </ol>
-      </nav>
+            {{ /for }}
+          </ol>
+        </nav>
       {{ /if }}
 
       <main class="main">
         {{ include "templates/breadcrumb.vto" }}
 
-        <div class="body" {{ if it.content && it.pagefind }}data-pagefind-body{{ /if }}>
+        <div
+          class="body"
+          {{ if it.content && it.pagefind }}data-pagefind-body{{ /if }}
+        >
           {{ if !it.title }}
             <h1>{{ it.basename }}</h1>
           {{ /if }}
@@ -70,32 +92,40 @@
           {{ if content }}
             {{ content }}
           {{ else }}
+            {{ if it.title }}
+              <h1>{{ it.title }}</h1>
+            {{ /if }}
             <p class="emptyState">The page <code>{{ url }}</code> is empty</p>
           {{ /if }}
         </div>
 
         {{ if it.footnotes?.length }}
-        <aside role="note" class="footnotes">
-          <dl>
-            {{ for note of footnotes }}
-            <div id={{ note.id }} class="footnote">
-              <dt><a href="#{{ note.refId }}">{{ note.label }}</a></dt>
-              <dd>{{ note.content }}</dd>
-            </div>
-            {{ /for }}
-          </dl>
-        </aside>
+          <aside role="note" class="footnotes">
+            <dl>
+              {{ for note of footnotes }}
+                <div id="{{ note.id }}" class="footnote">
+                  <dt><a href="#{{ note.refId }}">{{ note.label }}</a></dt>
+                  <dd>{{ note.content }}</dd>
+                </div>
+              {{ /for }}
+            </dl>
+          </aside>
         {{ /if }}
       </main>
 
       {{ if it.edit != false && it.repo }}
-      <footer class="body-footer">
-        <time timestamp="{{ date |> date("DATETIME") }}">Last updated: {{ date |> date("HUMAN_DATETIME") }}</time>
-        {{ if it.repo }}
-          &nbsp;—&nbsp;
-          <a href="{{ repo.url }}/edit/main{{ repo.path }}{{ page.src.path }}{{ page.src.ext }}">Edit this page</a>
-        {{ /if }}
-      </footer>
+        <footer class="body-footer">
+          <time timestamp='{{ date |> date("DATETIME") }}'>Last updated: {{
+              date
+              |> date("HUMAN_DATETIME")
+            }}</time>
+          {{ if it.repo }}
+            &nbsp;—&nbsp;
+            <a
+              href="{{ repo.url }}/edit/main{{ repo.path }}{{ page.src.path }}{{ page.src.ext }}"
+            >Edit this page</a>
+          {{ /if }}
+        </footer>
       {{ /if }}
     </div>
   </body>

@@ -3,37 +3,50 @@
 
   {{ if page }}
     {{ if page.logo }}
-      <a class="menu-logo" href="{{ page.url }}"><img src="{{ page.logo }}" alt="{{ page.title || slug }}"></a>
+      <a class="menu-logo" href="{{ page.url }}"><img
+          src="{{ page.logo }}"
+          alt="{{ page.title || slug }}"
+        ></a>
     {{ else }}
-      <a class="menu-highlight" href="{{ page.url }}">{{ page.title || slug }}</a>
+      <a class="menu-highlight" href="{{ page.url }}">{{
+        page.title || slug
+      }}</a>
     {{ /if }}
   {{ /if }}
 
-  {{ if alternates?.length > 1 }}  
-  <ul class="menu-languages">
-  {{ for alt of alternates }}
-    <li>
-      <a href="{{ alt.url }}" {{ if alt.lang == lang }}aria-current="page"{{ /if }} title="{{ alt.title |> escape }}">
-        {{ alt.lang |> langName }}
-      </a>
-    </li>
-  {{ /for }}
-  </ul>
+  {{ if alternates?.length > 1 }}
+    <ul class="menu-languages">
+      {{ for alt of alternates }}
+        <li>
+          <a
+            href="{{ alt.url }}"
+            {{ if alt.lang == lang }}aria-current="page"{{ /if }}
+            title="{{ alt.title |> escape }}"
+          >
+            {{ alt.lang |> langName }}
+          </a>
+        </li>
+      {{ /for }}
+    </ul>
   {{ /if }}
 
-  {{ set menu = alternates?.length ? `/menu-${lang}.json` : '/menu.json' }}
-  <tree-menu class="menu" data-base="{{ "/" |> url }}" data-url="{{ menu |> url }}">
+  {{ set menu = alternates?.length ? `/menu-${lang}.json` : "/menu.json" }}
+  <tree-menu
+    class="menu"
+    data-base='{{ "/" |> url }}'
+    data-url="{{ menu |> url }}"
+  >
     {{ if menu_links?.length }}
-    <ul>
-    {{- for link of menu_links }}
-      <li>
-        <a href="{{ link.href }}" class="menu-custom">
-          {{ link.icon |> icon }}
-          {{ link.text }}
-        </a>
-      </li>
-    {{ /for }}
-    </ul>  
+      <ul>
+        {{- for link of menu_links }}
+          <li>
+            <a href="{{ link.href }}" class="menu-custom">
+              {{ link.icon |> icon }}
+              {{ link.text }}
+            </a>
+          </li>
+        {{ /for }}
+      </ul>
     {{ /if }}
   </tree-menu>
 </nav>
