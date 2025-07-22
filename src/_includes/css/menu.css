@@ -16,6 +16,19 @@
   }
 }
 
+.menu-button {
+  @media (min-width: 950px) {
+    display: none;
+  }
+
+  svg {
+    fill: currentColor;
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+  }
+}
+
 .menu-logo {
   font: var(--font-small);
   display: block;
@@ -125,10 +138,6 @@
     &:not([aria-current="page"]):hover {
       text-decoration: underline;
       color: var(--color-base);
-    }
-
-    @media (max-width: 949px) {
-      max-width: max-content;
     }
   }
 

@@ -1,15 +1,15 @@
-<nav class="menu-container">
+<nav class="menu-container" id="menu-container">
   {{> const page = search.page("url=/") }}
 
   {{ if page }}
     {{ if page.logo }}
       <a class="menu-logo" href="{{ page.url }}"><img
           src="{{ page.logo }}"
-          alt="{{ page.title || slug }}"
+          alt="{{ page.title || page.basename }}"
         ></a>
     {{ else }}
       <a class="menu-highlight" href="{{ page.url }}">{{
-        page.title || slug
+        page.title || page.basename
       }}</a>
     {{ /if }}
   {{ /if }}

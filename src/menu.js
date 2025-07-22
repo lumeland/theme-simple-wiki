@@ -73,3 +73,19 @@ customElements.define(
 function decodeURIComponentSafe(path) {
   return decodeURIComponent(path.replace(/%(?![0-9a-fA-F]+)/g, "%25"));
 }
+
+const menuButton = document.querySelector("#menu-button");
+const menuContainer = document.querySelector("#menu-container");
+
+menuButton.addEventListener("click", () => {
+  menuContainer.classList.toggle("is-open");
+});
+
+document.body.addEventListener("click", (event) => {
+  if (
+    !menuContainer.contains(event.target) &&
+    !menuButton.contains(event.target)
+  ) {
+    menuContainer.classList.remove("is-open");
+  }
+});

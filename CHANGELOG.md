@@ -6,7 +6,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
-## [0.13.1] - Unreleased
+## [0.14.0] - Unreleased
+### Added
+- Links to next/previous pages
+- Links to child pages
+
+### Changed
+- Menu on mobile is moved to an hamburguer button.
+- Show the current page in the breakcrumb
+- Search results drawer has position absolute.
+
 ### Fixed
 - Print title on empty pages if it's defined in the front matter.
 
