@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) and this
 project adheres to [Semantic Versioning](http://semver.org/).
 
-## [0.14.0] - Unreleased
+## [0.14.0] - 2025-07-22
 ### Added
 - Links to next/previous pages
 - Links to child pages
@@ -14,7 +14,7 @@ project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Menu on mobile is moved to an hamburguer button.
 - Show the current page in the breakcrumb
-- Search results drawer has position absolute.
+- Show search results with position absolute.
 
 ### Fixed
 - Print title on empty pages if it's defined in the front matter.
@@ -212,7 +212,7 @@ First version
 [#8]: https://github.com/lumeland/theme-simple-wiki/issues/8
 [#9]: https://github.com/lumeland/theme-simple-wiki/issues/9
 
-[0.13.1]: https://github.com/lumeland/theme-simple-wiki/compare/v0.13.0...HEAD
+[0.14.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.13.0...v0.14.0
 [0.13.0]: https://github.com/lumeland/theme-simple-wiki/compare/v0.12.2...v0.13.0
 [0.12.2]: https://github.com/lumeland/theme-simple-wiki/compare/v0.12.1...v0.12.2
 [0.12.1]: https://github.com/lumeland/theme-simple-wiki/compare/v0.12.0...v0.12.1
