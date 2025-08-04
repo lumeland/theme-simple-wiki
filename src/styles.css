@@ -51,41 +51,8 @@ html {
     top: 2rem;
   }
 }
-.container > nav.menu-container {
+.container > .menu-container {
   grid-area: menu;
-  background-color: var(--color-highlight);
-  padding: 1rem;
-  display: grid;
-  align-content: start;
-  grid-template-columns: 1fr minmax(10vw, 275px);
-  grid-template-rows: auto minmax(0, 1fr);
-  padding-top: 2rem;
-  padding-bottom: 0;
-  border-right: solid 1px var(--color-line);
-  align-self: start;
-  height: 100vh;
-  position: sticky;
-  top: 0;
-
-  > * {
-    grid-column: 2;
-  }
-
-  &:has(.menu-languages) {
-    grid-template-rows: auto auto minmax(0, 1fr);
-  }
-
-  @media (max-width: 949px) {
-    position: fixed;
-    z-index: 10;
-    box-shadow: 0 0 10px #3333;
-    width: min(100%, 300px);
-    transition: transform 200ms;
-
-    &:not(.is-open) {
-      transform: translateX(-100%);
-    }
-  }
 }
 .container > .toolbar {
   grid-area: toolbar;
@@ -125,6 +92,39 @@ main {
   :target {
     outline: solid 1px var(--color-line);
     outline-offset: 2px;
+  }
+
+  details {
+    border: none;
+    border-left: solid 1px var(--color-line);
+    margin: 1rem 0;
+    padding-left: 1em;
+
+    summary {
+      font: var(--font-ui-bold);
+      background: none;
+      padding-left: 0;
+      width: fit-content;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 14px;
+        height: 14px;
+        margin-right: 0.5rem;
+        background: var(--marker-image);
+        background-size: contain;
+        transition: transform var(--animation-duration);
+      }
+    }
+    &:not([open]) summary::before {
+      transform: rotate(-90deg);
+    }
   }
 }
 .body-footer {

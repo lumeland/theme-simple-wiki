@@ -1,3 +1,39 @@
+.menu-container {
+  background-color: var(--color-highlight);
+  padding: 1rem 0 1rem 1rem;
+  display: grid;
+  align-content: start;
+  grid-template-columns: 1fr minmax(10vw, 275px);
+  grid-template-rows: auto minmax(0, 1fr);
+  padding-top: 2rem;
+  padding-bottom: 0;
+  border-right: solid 1px var(--color-line);
+  align-self: start;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+
+  > * {
+    grid-column: 2;
+  }
+
+  &:has(.menu-languages) {
+    grid-template-rows: auto auto minmax(0, 1fr);
+  }
+
+  @media (max-width: 949px) {
+    position: fixed;
+    z-index: 10;
+    box-shadow: 0 0 10px #3333;
+    width: min(100%, 300px);
+    transition: transform 200ms;
+
+    &:not(.is-open) {
+      transform: translateX(-100%);
+    }
+  }
+}
+
 .menu-highlight {
   font: var(--font-small);
   display: flex;
@@ -7,6 +43,7 @@
   background: var(--color-line);
   height: 52px;
   margin-bottom: 1rem;
+  margin-right: 1rem;
   border-radius: var(--border-radius);
   padding: 0.5rem;
   color: inherit;
@@ -59,9 +96,10 @@
 }
 .menu-languages {
   list-style: none;
-  margin: 0 0 1rem 0;
+  margin: 0 1rem 1rem 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5em;
   font: var(--font-small);
 
@@ -91,10 +129,9 @@
 
 .menu > ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: 0 0.5rem 0 0;
   border-top: solid 1px var(--color-line);
-  padding-top: 1rem;
+  padding: 1rem 0;
 
   & ul {
     list-style: none;
