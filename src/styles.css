@@ -4,6 +4,7 @@
 /* Custom components */
 @import "css/menu.css";
 @import "css/updates.css";
+@import "css/copy-code-button.css";
 
 html {
   scrollbar-gutter: stable;

@@ -64,6 +64,18 @@ export default function (options: Options = {}) {
       .data("order", 0)
       .mergeKey("extra_head", "stringArray")
       .add("menu.js")
+      .add("copy-code-button.js")
+      .process([".html"], (pages) => {
+        pages.forEach((page) => {
+          const document = page.document;
+          document.querySelectorAll("pre > code").forEach((codeBlock) => {
+            const pre = codeBlock.parentElement;
+            pre?.classList.add("has-copy");
+            const copyButton = document.createElement("copy-code-button");
+            codeBlock.appendChild(copyButton);
+          });
+        });
+      })
       .add([
         ".css",
         ".jpg",
