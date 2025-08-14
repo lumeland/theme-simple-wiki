@@ -1,0 +1,40 @@
+pre.has-copy {
+    position: relative;
+}
+
+copy-code-button button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 2;
+}
+
+copy-code-button button {
+    background: var(--color-highlight, #eee);
+    color: var(--color-base, #222);
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 0.9em;
+    cursor: pointer;
+    opacity: 0.7;
+    transition:
+        opacity var(--animation-duration, 0.2s),
+        background 0.2s,
+        color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+copy-code-button button:hover {
+    opacity: 1;
+    background: var(--color-primary);
+    color: var(--color-background);
+}
+
+copy-code-button button.copied {
+    opacity: 1;
+    background: var(--color-primary-highlight);
+    color: var(--color-background);
+}

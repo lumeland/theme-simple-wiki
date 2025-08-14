@@ -25,3 +25,12 @@ Here is a footnote reference,[^1] and [^2]another. And this[^3] is a long note.
 > [!tip]
 >
 > This is a tip paragraph
+
+```ts
+const example = "This is an example code snippet";
+```
+
+```ts
+const anotherExample = `This is a long example paragraph that spans multiple lines.
+It should be wrapped correctly in the output.`;
+```
