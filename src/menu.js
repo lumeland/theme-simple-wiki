@@ -29,7 +29,7 @@ customElements.define(
           a.href = href;
           a.textContent = data.title || slug;
 
-          if (href === url) {
+          if (decodeURIComponentSafe(href) === url) {
             a.setAttribute("aria-current", "page");
           }
           li.appendChild(a);

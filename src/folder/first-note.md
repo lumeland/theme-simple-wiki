@@ -31,6 +31,7 @@ const example = "This is an example code snippet";
 ```
 
 ```ts
-const anotherExample = `This is a long example paragraph that spans multiple lines.
+const anotherExample =
+  `This is a long example paragraph that spans multiple lines.
 It should be wrapped correctly in the output.`;
 ```

@@ -121,4 +121,6 @@ Lorem ipsum...
 
 ## Credit
 
-This theme uses [phosphor icons](https://phosphoricons.com), which are licensed under the [MIT License](https://raw.githubusercontent.com/phosphor-icons/homepage/master/LICENSE).
+This theme uses [phosphor icons](https://phosphoricons.com), which are licensed
+under the
+[MIT License](https://raw.githubusercontent.com/phosphor-icons/homepage/master/LICENSE).
