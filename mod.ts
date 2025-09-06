@@ -12,6 +12,7 @@ export default function (options?: Options) {
     const files = [
       "_includes/css/menu.css",
       "_includes/css/updates.css",
+      "_includes/css/copy-code-button.css",
       "_includes/styles.css",
       "_includes/templates/breadcrumb.vto",
       "_includes/layout.vto",
@@ -19,6 +20,7 @@ export default function (options?: Options) {
       "_includes/templates/menu.vto",
       "menu.js",
       "menu.page.ts",
+      "copy-code-button.js",
       "styles.css",
     ];
 
