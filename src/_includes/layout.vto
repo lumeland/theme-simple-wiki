@@ -118,6 +118,7 @@
           {{ /if }}
         </div>
 
+        {{ if hide_card_list !== true }}  
         {{
           set children = nav.menu(
             url,
@@ -136,6 +137,7 @@
               {{ /if }}
             {{ /for }}
           </nav>
+        {{ /if }}
         {{ /if }}
 
         {{ if it.footnotes?.length }}

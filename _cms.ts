@@ -6,7 +6,7 @@ cms.document({
   name: "Settings",
   description: "Global settings for the site",
   store: "src:_data.yml",
-  url: "/",
+  previewUrl: () => "/",
   fields: [
     {
       name: "logo",
@@ -49,6 +49,16 @@ cms.document({
         },
       ],
     },
+    {
+      name: "hide_pagination",
+      type: "checkbox",
+      description: "Hide the next/previous pagination links at the bottom of pages",
+    },
+    {
+      name: "hide_card_list",
+      type: "checkbox",
+      description: "Hide the list of cards with inner pages on index pages",
+    }
   ],
 });
 

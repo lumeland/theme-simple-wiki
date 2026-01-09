@@ -1,3 +1,4 @@
 menu_links: []
-logo: # path to logo image
-hide_pagination: false # set to true to hide next/previous navigation at the bottom of pages
+logo: ''
+hide_pagination: false
+hide_card_list: false
