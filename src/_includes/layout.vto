@@ -166,55 +166,57 @@
           {{ /if }}
         </footer>
       {{ /if }}
+      {{ if it.pagination }}
+        <nav class="body-nav pagination">
+          <ul>
+            {{
+              set previousPage = nav.previousPage(
+                url,
+                `lang=${lang} hide_menu!=true`,
+                "order=asc title=asc-locale basename=asc-locale",
+              )
+            }}
 
-      <nav class="body-nav pagination">
-        <ul>
+            {{ if previousPage }}
+              <li class="pagination-prev">
+                <a href="{{ previousPage.url }}" rel="prev">
+                  ← Previous
+                  <strong>{{
+                    previousPage.title ||
+                      previousPage.basename
+                  }}</strong>
+                </a>
+              </li>
+            {{ /if }}
+
+            {{
+              set nextPage = nav.nextPage(
+                url,
+                `lang=${lang} hide_menu!=true`,
+                "order=asc title=asc-locale basename=asc-locale",
+              )
+            }}
+
+            {{ if nextPage }}
+              <li class="pagination-next">
+                <a href="{{ nextPage.url }}" rel="next">
+                  Next →
+                  <strong>{{ nextPage.title || nextPage.basename }}</strong>
+                </a>
+              </li>
+            {{ /if }}
+          </ul>
+
           {{
-            set previousPage = nav.previousPage(
+            set children = nav.menu(
               url,
               `lang=${lang} hide_menu!=true`,
               "order=asc title=asc-locale basename=asc-locale",
-            )
+            )?.children
           }}
+        </nav>
+      {{ /if }}
 
-          {{ if previousPage }}
-            <li class="pagination-prev">
-              <a href="{{ previousPage.url }}" rel="prev">
-                ← Previous
-                <strong>{{
-                  previousPage.title ||
-                    previousPage.basename
-                }}</strong>
-              </a>
-            </li>
-          {{ /if }}
-
-          {{
-            set nextPage = nav.nextPage(
-              url,
-              `lang=${lang} hide_menu!=true`,
-              "order=asc title=asc-locale basename=asc-locale",
-            )
-          }}
-
-          {{ if nextPage }}
-            <li class="pagination-next">
-              <a href="{{ nextPage.url }}" rel="next">
-                Next →
-                <strong>{{ nextPage.title || nextPage.basename }}</strong>
-              </a>
-            </li>
-          {{ /if }}
-        </ul>
-
-        {{
-          set children = nav.menu(
-            url,
-            `lang=${lang} hide_menu!=true`,
-            "order=asc title=asc-locale basename=asc-locale",
-          )?.children
-        }}
-      </nav>
     </div>
   </body>
 </html>
