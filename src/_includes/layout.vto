@@ -118,26 +118,26 @@
           {{ /if }}
         </div>
 
-        {{ if hide_card_list !== true }}  
-        {{
-          set children = nav.menu(
-            url,
-            `lang=${lang} hide_menu!=true`,
-            "order=asc title=asc-locale basename=asc-locale",
-          )?.children
-        }}
+        {{ if hide_card_list !== true }}
+          {{
+            set children = nav.menu(
+              url,
+              `lang=${lang} hide_menu!=true`,
+              "order=asc title=asc-locale basename=asc-locale",
+            )?.children
+          }}
 
-        {{ if children }}
-          <nav class="body-children">
-            {{ for child of children }}
-              {{ if child.data.url }}
-                <a href="{{ child.data.url }}">{{
-                  child.data.title || child.data.basename
-                }}</a>
-              {{ /if }}
-            {{ /for }}
-          </nav>
-        {{ /if }}
+          {{ if children }}
+            <nav class="body-children">
+              {{ for child of children }}
+                {{ if child.data.url }}
+                  <a href="{{ child.data.url }}">{{
+                    child.data.title || child.data.basename
+                  }}</a>
+                {{ /if }}
+              {{ /for }}
+            </nav>
+          {{ /if }}
         {{ /if }}
 
         {{ if it.footnotes?.length }}
