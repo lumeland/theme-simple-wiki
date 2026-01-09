@@ -44,12 +44,17 @@ html {
 .container > .toc {
   display: none;
   grid-area: toc;
+  overscroll-behavior: contain;
 
   @media (min-width: 1200px) {
     display: block;
     position: sticky;
     align-self: start;
     top: 2rem;
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-dim) var(--color-background);
   }
 }
 .container > .menu-container {
