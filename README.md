@@ -5,22 +5,18 @@
 - Use markdown to save the pages
 - Instant search engine.
 
+## Prerequisites
+
+[Deno](https://deno.com/) installed on your computer. Make sure to have it [installed](https://docs.deno.com/runtime/getting_started/installation/) if you haven't already done so.
+
 ## Install as remote theme
 
 The **fastest and easiest** way to use this theme is by importing it as a remote
-module. It allows to create a blog in seconds and update it at any time just
-changing the version number in the import url. Just add the following code to
-your `_config.ts` file:
+module. It allows to create a wiki in seconds and update it at any time just
+changing the version number in the import map. Run the following command to create a new project:
 
-```ts
-import lume from "lume/mod.ts";
-import wiki from "https://deno.land/x/lume_theme_simple_wiki@v0.1.0/mod.ts";
-
-const site = lume();
-
-site.use(wiki());
-
-export default site;
+```
+deno run -A https://lume.land/init.ts --theme=simple-wiki
 ```
 
 ### Multilanguage support
@@ -75,13 +71,6 @@ footer:
 ```
 repo: [https://github.com/me/therepo](https://github.com/me/therepo)
 ```
-
-### Use lume cms
-
-You can also edit the above settings via [lume cms](https://lume.land/cms/) (run
-`deno task lume cms`), which is now included with simple-wiki. See the
-[relevant config section](https://github.com/lumeland/theme-simple-wiki/blob/main/_cms.ts#L18-L60)
-in the wiki's `_cms.ts`.
 
 ### In Markdown Content
 
