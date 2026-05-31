@@ -105,7 +105,11 @@ html {
   }
 }
 .main > .toc {
-  margin: var(--row-gap-xsmall) 0 2em;
+  margin: var(--row-gap-xsmall) 0;
+
+  &:has(.toc-details[open]) {
+    margin-bottom: 2em;
+  }
 
   @media (min-width: 1200px) {
     display: none;
