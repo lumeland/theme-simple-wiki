@@ -18,10 +18,11 @@ html {
   row-gap: 2em;
   column-gap: min(5vw, 4rem);
   grid-template-columns: 0 minmax(0, 800px) 0;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto auto 1fr;
   grid-template-areas:
     "menu . ."
     "menu toolbar ."
+    "menu toc ."
     "menu main ."
     "menu footer ."
     "menu nav ."
@@ -42,12 +43,10 @@ html {
   }
 }
 .container > .toc {
-  display: none;
   grid-area: toc;
   overscroll-behavior: contain;
 
   @media (min-width: 1200px) {
-    display: block;
     position: sticky;
     align-self: start;
     top: 2rem;
