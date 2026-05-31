@@ -163,6 +163,12 @@ main {
     outline-offset: 2px;
   }
 
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
   details {
     border: none;
     border-left: solid 1px var(--color-line);
