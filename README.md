@@ -15,7 +15,7 @@ The **fastest and easiest** way to use this theme is by importing it as a remote
 module. It allows to create a wiki in seconds and update it at any time just
 changing the version number in the import map. Run the following command to create a new project:
 
-```
+```sh
 deno run -A https://lume.land/init.ts --theme=simple-wiki
 ```
 
@@ -46,7 +46,7 @@ and edit the [_config.ts](./_config.ts) file. The source files are in the
 Set options in your `/src/_data.yml`, such as, add extra links to the bottom of
 the sidebar menu:
 
-```
+```yml
 menu_links: 
   - text: <strong>MyCo</strong>
     href: https://example.com
@@ -58,7 +58,7 @@ menu_links:
 
 Add additional script or css calls to your `<head>`, such as Fathom Analytics:
 
-```
+```yml
 extra_head: |
   <!-- Fathom Analytics -->
     <script src="https://cdn.usefathom.com/script.js" data-site="A1B2C3D4" defer></script>
@@ -68,7 +68,7 @@ extra_head: |
 Set the repository, which will cause an "Edit This Page" link to appear in the
 footer:
 
-```
+```yml
 repo: [https://github.com/me/therepo](https://github.com/me/therepo)
 ```
 
@@ -78,7 +78,7 @@ In your markdown content files,
 [use Github-style "callout" codes](https://github.com/orgs/community/discussions/16925)
 to call attention to asides in your text.
 
-```
+```md
 > [!NOTE]  
 > Highlights information that users should take into account, even when skimming.
 
@@ -97,7 +97,7 @@ to call attention to asides in your text.
 
 Set edit to false in page frontmatter, to suppress the "Edit this Page" link:
 
-```
+```md
 ---
 title: My Cool Page
 ...
