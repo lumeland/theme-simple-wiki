@@ -41,10 +41,48 @@ html {
       "menu menu . .";
   }
 }
+.toc {
+  overscroll-behavior: contain;
+
+  .toc-details {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  summary {
+    --marker-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" viewBox="0 0 256 256"><path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"></path></svg>');
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font: var(--font-ui-bold);
+    padding: 0;
+    text-transform: uppercase;
+    width: fit-content;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      flex: 0 0 auto;
+      width: 14px;
+      height: 14px;
+      margin-right: 0.5rem;
+      background: var(--marker-image);
+      background-size: contain;
+      transition: transform var(--animation-duration);
+    }
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  .toc-details:not([open]) summary::before {
+    transform: rotate(-90deg);
+  }
+}
 .container > .toc {
   display: none;
   grid-area: toc;
-  overscroll-behavior: contain;
 
   @media (min-width: 1200px) {
     display: block;
@@ -55,6 +93,31 @@ html {
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--color-dim) var(--color-background);
+
+    summary {
+      cursor: default;
+      list-style: none;
+      pointer-events: none;
+    }
+    summary::before {
+      display: none;
+    }
+  }
+}
+.main > .toc {
+  margin: var(--row-gap-xsmall) 0;
+
+  &:has(.toc-details[open]) {
+    margin-bottom: 2em;
+  }
+
+  @media (min-width: 1200px) {
+    display: none;
+  }
+}
+[data-theme="dark"] {
+  .toc summary {
+    --marker-image: url('data:image/svg+xml;charset=utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" viewBox="0 0 256 256"><path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"></path></svg>');
   }
 }
 .container > .menu-container {
