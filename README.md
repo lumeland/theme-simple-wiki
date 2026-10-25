@@ -24,9 +24,11 @@ deno run -A https://lume.land/init.ts --theme=simple-wiki
 Use the `languages` option to configure a multilanguage site:
 
 ```ts
-site.use(wiki({
-  languages: ["en", "gl", "es"],
-}));
+site.use(
+  wiki({
+    languages: ["en", "gl", "es"],
+  }),
+);
 ```
 
 You can see an example in the [demo](./demo) folder. To customize it copy the
@@ -47,7 +49,7 @@ Set options in your `/src/_data.yml`, such as, add extra links to the bottom of
 the sidebar menu:
 
 ```
-menu_links: 
+menu_links:
   - text: <strong>MyCo</strong>
     href: https://example.com
     icon: building-office
@@ -79,16 +81,16 @@ In your markdown content files,
 to call attention to asides in your text.
 
 ```
-> [!NOTE]  
+> [!NOTE]
 > Highlights information that users should take into account, even when skimming.
 
 > [!TIP]
 > Optional information to help a user be more successful.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Crucial information necessary for users to succeed.
 
-> [!WARNING]  
+> [!WARNING]
 > Critical content demanding immediate user attention due to potential risks.
 
 > [!CAUTION]

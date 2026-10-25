@@ -1,6 +1,6 @@
-import lumeCMS from "lume/cms/mod.ts";
+import createCms from "@lumeland/cms";
 
-const cms = lumeCMS();
+const cms = createCms();
 
 cms.document({
   name: "Settings",
@@ -11,8 +11,7 @@ cms.document({
     {
       name: "logo",
       type: "file",
-      description:
-        "The logo of the site. If it's emtpy, the title will be used",
+      description: "The logo of the site. If it's emtpy, the title will be used",
     },
     {
       name: "lang",
@@ -52,8 +51,7 @@ cms.document({
     {
       name: "hide_pagination",
       type: "checkbox",
-      description:
-        "Hide the next/previous pagination links at the bottom of pages",
+      description: "Hide the next/previous pagination links at the bottom of pages",
     },
     {
       name: "hide_card_list",
@@ -63,27 +61,20 @@ cms.document({
   ],
 });
 
-cms.collection(
-  "pages: All pages of the site",
-  "src:**/*.md",
-  [
-    {
-      name: "extra_head",
-      type: "code",
-      description: "Extra content to include in the HEAD tag",
-    },
-    {
-      name: "hide_menu",
-      type: "checkbox",
-      description: "Hide this page from the main menu",
-    },
-    "content: markdown",
-  ],
-);
+cms.collection("pages: All pages of the site", "src:**/*.md", [
+  {
+    name: "extra_head",
+    type: "code",
+    description: "Extra content to include in the HEAD tag",
+  },
+  {
+    name: "hide_menu",
+    type: "checkbox",
+    description: "Hide this page from the main menu",
+  },
+  "content: markdown",
+]);
 
-cms.upload(
-  "uploads: Uploaded files",
-  "src:**/*{.jpg,.svg,.png,.gif,.mp3,.mp4,.pdf}",
-);
+cms.upload("uploads: Uploaded files", "src:**/*{.jpg,.svg,.png,.gif,.mp3,.mp4,.pdf}");
 
 export default cms;

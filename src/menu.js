@@ -10,10 +10,7 @@ customElements.define(
 
     render(menu, ul, url) {
       const fragment = document.createDocumentFragment();
-      const baseUrl = new URL(
-        this.dataset.base ?? "/",
-        document.location.origin,
-      );
+      const baseUrl = new URL(this.dataset.base ?? "/", document.location.origin);
 
       for (const { data, children, slug } of menu) {
         let li = document.createElement("li");
@@ -82,10 +79,7 @@ menuButton.addEventListener("click", () => {
 });
 
 document.body.addEventListener("click", (event) => {
-  if (
-    !menuContainer.contains(event.target) &&
-    !menuButton.contains(event.target)
-  ) {
+  if (!menuContainer.contains(event.target) && !menuButton.contains(event.target)) {
     menuContainer.classList.remove("is-open");
   }
 });

@@ -1,0 +1,43 @@
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 1rem;
+  padding: 2rem min(5vw, 5rem);
+  align-items: center;
+}
+
+.navbar-links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.5rem;
+  font: var(--font-ui-bold);
+  align-items: center;
+
+  & [aria-current="page"] {
+    text-decoration: none;
+  }
+}
+
+.navbar-search {
+  pagefind-modal-trigger {
+    display: block;
+    width: fit-content;
+  }
+
+  @media (width < 500px) {
+    flex-grow: 1;
+
+    pagefind-modal-trigger {
+      width: 100%;
+    }
+  }
+}
+
+.navbar-home {
+  text-decoration: none;
+  margin-inline-end: auto;
+}

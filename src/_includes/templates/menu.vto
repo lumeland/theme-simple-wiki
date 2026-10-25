@@ -14,6 +14,11 @@
     {{ /if }}
   {{ /if }}
 
+  <div class="menu-search">
+    <pagefind-modal-trigger></pagefind-modal-trigger>
+    <pagefind-modal></pagefind-modal>
+  </div>
+
   {{ if alternates?.length > 1 }}
     <ul class="menu-languages">
       {{ for alt of alternates }}
@@ -41,7 +46,10 @@
         {{- for link of menu_links }}
           <li>
             <a href="{{ link.href }}" class="menu-custom">
-              {{ link.icon |> icon }}
+              {{ if link.icon }}
+              <img src="{{ link.icon |> icon("phosphor") }}">
+              {{ /if }}
+
               {{ link.text }}
             </a>
           </li>

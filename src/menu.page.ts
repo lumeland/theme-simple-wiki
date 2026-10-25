@@ -2,12 +2,9 @@ export const renderOrder = 1;
 
 export default function* ({ nav, languages }: Lume.Data) {
   if (!languages.length) {
-    const menu = nav.menu(
-      "/",
-      `hide_menu!=true`,
-      "order=asc title=asc-locale basename=asc-locale",
-    )?.children ||
-      [];
+    const menu =
+      nav.menu("/", `hide_menu!=true`, "order=asc title=asc-locale basename=asc-locale")
+        ?.children || [];
 
     yield {
       url: `/menu.json`,
@@ -19,12 +16,12 @@ export default function* ({ nav, languages }: Lume.Data) {
   for (const lang of languages) {
     const baseUrl = lang === languages[0] ? "/" : `/${lang}`;
 
-    const menu = nav.menu(
-      baseUrl,
-      `lang=${lang} hide_menu!=true`,
-      "order=asc title=asc-locale basename=asc-locale",
-    )?.children ||
-      [];
+    const menu =
+      nav.menu(
+        baseUrl,
+        `lang=${lang} hide_menu!=true`,
+        "order=asc title=asc-locale basename=asc-locale",
+      )?.children || [];
 
     yield {
       url: `/menu-${lang}.json`,
