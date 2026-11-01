@@ -1,4 +1,5 @@
-_bin
+node_modules
 _cache
 _site
-deno.lock
+build
+package

@@ -1,10 +1,30 @@
-/* Lume's design system */
-@import "https://unpkg.com/@lumeland/ds@0.5.2/ds.css";
+@import "css/reset.css" layer(base);
+@import "css/variables.css" layer(base);
 
-/* Custom components */
-@import "css/menu.css";
-@import "css/updates.css";
-@import "css/copy-code-button.css";
+@import "css/badge.css" layer(components);
+@import "css/blockquote.css" layer(components);
+@import "css/body.css" layer(components);
+@import "css/breadcrumb.css" layer(components);
+@import "css/button.css" layer(components);
+@import "css/code.css" layer(components);
+@import "css/comments.css" layer(components);
+@import "css/copy-code-button.css" layer(components);
+@import "css/empty-state.css" layer(components);
+@import "css/footer.css" layer(components);
+@import "css/footnotes.css" layer(components);
+@import "css/icon.css" layer(components);
+@import "css/menu.css" layer(components);
+@import "css/navbar.css" layer(components);
+@import "css/page.css" layer(components);
+@import "css/pagination.css" layer(components);
+@import "css/post-list.css" layer(components);
+@import "css/post.css" layer(components);
+@import "css/toc.css" layer(components);
+@import "css/updates.css" layer(components);
+
+@layer components {
+  /** pagefind */
+}
 
 html {
   scrollbar-gutter: stable;
@@ -23,8 +43,8 @@ html {
     "menu . ."
     "menu toolbar ."
     "menu main ."
-    "menu footer ."
     "menu nav ."
+    "menu footer ."
     "menu . .";
 
   @media (min-width: 950px) {
@@ -36,8 +56,8 @@ html {
       "menu menu . ."
       "menu menu toolbar ."
       "menu menu main toc"
-      "menu menu footer toc"
-      "menu menu nav ."
+      "menu menu nav toc"
+      "menu menu footer ."
       "menu menu . .";
   }
 }
@@ -132,20 +152,6 @@ html {
   .search {
     flex: 1 1 auto;
   }
-  .theme {
-    svg {
-      display: block;
-      fill: currentColor;
-    }
-  }
-
-  @media (min-width: 1200px) {
-    .theme {
-      position: fixed;
-      top: 1rem;
-      right: 1.2rem;
-    }
-  }
 
   .pagefind-ui__drawer {
     position: absolute;
@@ -204,11 +210,6 @@ main {
 }
 .body-footer {
   grid-area: footer;
-  font: var(--font-small);
-  color: var(--color-dim);
-  border-top: solid 1px var(--color-line);
-  padding: 1em 0;
-  margin-top: 1em;
 }
 .body-nav {
   grid-area: nav;
