@@ -2,7 +2,6 @@ import lightningcss from "@lumeland/plugin-lightningcss";
 import pagefind from "@lumeland/plugin-pagefind";
 import resolveUrls from "@lumeland/plugin-resolve-urls";
 import nav from "@lumeland/plugin-nav";
-// import title from "https://deno.land/x/lume_markdown_plugins@v0.9.0/title.ts";
 
 import toc from "@lumeland/plugin-toc";
 import footnotes from "@lumeland/plugin-markdown-footnotes";
@@ -47,7 +46,6 @@ export default function (options: Options = {}) {
   return (site: Lume.Site) => {
     site
       .use(nav())
-      // .use(title())
       .use(toc())
       .use(footnotes())
       .use(
